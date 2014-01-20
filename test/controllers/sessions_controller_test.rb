@@ -8,14 +8,14 @@ class SessionsControllerTest < ActionController::TestCase
   
   test "should login" do
     dave = users(:client)
-    post :create, name: dave.name, password: 'client'
+    post :create, email: dave.email, password: 'client'
     assert_redirected_to main_url
     assert_equal dave.id, session[:user_id]
   end
   
   test "should fail login" do
     dave = users(:client)
-    post :create, name: dave.name, password: 'wrong'
+    post :create, email: dave.email, password: 'wrong'
     assert_redirected_to login_url
   end
   

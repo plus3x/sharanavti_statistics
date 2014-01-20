@@ -3,6 +3,7 @@
 client:
   email: client@client.com
   password_digest: <%= BCrypt::Password.create('client') %>
+  role: client
 
 admin:
   email: admin@admin.com

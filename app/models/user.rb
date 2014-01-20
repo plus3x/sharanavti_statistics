@@ -7,10 +7,10 @@ class User < ActiveRecord::Base
     self.role ||= Role.find_by(title: 'client')
   end
   
-  validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/
+  validates_format_of   :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/
   validates_presence_of :email, :password
-  validates_associated :role
-  validates_length_of :password, minimum: 5
+  validates_associated  :role
+  validates_length_of   :password, minimum: 5
   
   def admin?
     role.title == 'admin'
