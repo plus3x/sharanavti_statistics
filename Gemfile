@@ -7,6 +7,9 @@ gem 'rails', '4.1.0.beta1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Use HAML for templates
+gem 'haml'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
 
@@ -35,7 +38,7 @@ gem 'sdoc',          group: :doc, require: false
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -45,4 +48,7 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development do
+  gem 'pry-rails'
+end
 
