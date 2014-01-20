@@ -6,7 +6,8 @@ class Role < ActiveRecord::Base
       when 'admin'
         true
       when 'client'
-        request_to controller: [:sessions], action: [:new, :create, :destroy]
+        request_to controller: [:sessions], action: [:new, :create, :destroy] or
+        request_to controller: [:main]
       else
         false
       end

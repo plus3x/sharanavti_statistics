@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
     role.title == 'admin'
   end
   
+  def client?
+    role.title == 'client'
+  end
+  
   def can?(controller, action)
     role.permit?(controller, action)
   end

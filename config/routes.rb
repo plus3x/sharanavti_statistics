@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  
-  resources :users
 
-  root to: 'sessions#new', as: :login
+  root to: 'main#index', as: :main
+
+  resources :users
 
   controller :sessions do
     get    'login'  => :new

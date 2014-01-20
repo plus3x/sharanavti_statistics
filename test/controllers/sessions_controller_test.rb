@@ -22,6 +22,6 @@ class SessionsControllerTest < ActionController::TestCase
   test "should logout" do
     login_as :client
     delete :destroy
-    assert_redirected_to main_url
+    assert_redirected_to login_url
   end
 end
