@@ -1,10 +1,27 @@
 !!!
 %html
   %head
-    %title SharanavtiStatistics
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    %title= @head_title || 'Онлайн статистика'
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
+    #banner
+      Онлайн статистика
+    #login
+      - if current_user
+        You may
+        = link_to t('sign_out'), logout_url, method: :delete
+        here.
+        %br
+        = "Hello #{current_user.email}"
+    #columns
+      #side
+        #ul
+          %li= link_to_unless_current 'Главная',  main_path
+      #main
 
-    = yield
+        = yield
+
+      #copyright
+        Copyright by &copy; 2013 NewMedia
