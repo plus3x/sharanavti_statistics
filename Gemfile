@@ -7,6 +7,9 @@ gem 'rails', '4.1.0.beta1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# For grafics
+gem 'lazy_high_charts'
+
 # Use HAML for templates
 gem 'haml'
 
