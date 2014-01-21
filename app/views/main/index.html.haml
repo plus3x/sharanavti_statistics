@@ -1,7 +1,3 @@
 %h1 Онлайн за день
-%ul
-  %li.js-basic_line
-    = link_to main_path, remote: true do
-      %i.icon-chevron-right
-      Basic Liine
-%section#basic_line
+%div
+  = high_chart 'my_id4', @chart
