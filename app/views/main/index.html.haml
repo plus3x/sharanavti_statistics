@@ -1,3 +1,7 @@
 %h1 Онлайн за день
 %div
-  = high_chart 'my_id4', @chart
+  / = high_chart 'chart', @chart
+  - if @sharics
+    = high_chart 'sharics', @sharics
+  - else
+    %h1 Нет данных из API!

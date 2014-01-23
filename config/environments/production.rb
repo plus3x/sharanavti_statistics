@@ -77,4 +77,10 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  
+  # Active resources configuration
+  # Include '.json' on end of path or not
+  config.active_resource.include_format_in_path = false
+  # Set default site
+  config.active_resource.site = 'http://localhost:4567'
 end

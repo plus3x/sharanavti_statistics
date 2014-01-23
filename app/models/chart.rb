@@ -19,4 +19,52 @@ class Chart
       f.series name: 'London',   data: [ 3.9, 4.2, 5.7,  8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3,  6.6, 4.8]
     end
   end
+  
+  def self.statistic(from, to)
+    people_on_game = Statistic.select(from: from, to: to)
+    data = []
+    people_on_game.each_with_index { |e,i| data << [(from + 1.minutes * i).to_i, e] }
+    
+    LazyHighCharts::HighChart.new do |f|
+      f.chart type: :area,
+              animation: 'Highcharts.svg',
+              events: { load: %|
+                    function() {
+                        // set up the updating of the chart each second
+                        var series = this.series[0];
+                        setInterval(function() {
+                            var x = (new Date()).getTime(), // current time
+                                y = Math.random();
+                            series.addPoint([x, y], true, true);
+                        }, 1000);
+                    }|.js_code }
+      
+      f.title    text: 'Статистика количества игроков в игре Шаранавты', x: -20
+      f.subtitle text: "Онлайн #{data[-1][1]} шарик(ов). За последнее время пришло #{data[-1][1]-data[-2][1]}", x: -20
+
+      f.xAxis type: :datetime
+
+      f.yAxis title: {text: 'Количество шариков'}, 
+              plot_lines: [{ value: 0, width: 1, color: '#808080'}]
+              # { afterSetExtremes:
+              #     %|function(e) {
+              #       series = this.series[0];
+              #       setInterval(function() {
+              #         x = (new Date()).getTime() // current time
+              #         $.getJSON("/get_new_dot, function(data) {
+              #             y = data;
+              #           }
+              #         });
+              #         series.addPoint([x, y], true, true);
+              #       }, 60000); // 1 minute
+              #     }|.js_code
+              #   }
+
+      f.tooltip value_suffix: ' шарик(ов)'
+
+      f.legend layout: :vertical, align: :right, verticalAlign: :top, x: -10, y: 100, borderWidth: 0
+
+      f.series name: 'Шарики', data: data
+    end
+  end
 end
