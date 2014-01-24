@@ -23,42 +23,20 @@ class Chart
   def self.statistic(from, to)
     people_on_game = Statistic.select(from: from, to: to)
     data = []
-    people_on_game.each_with_index { |e,i| data << [(from + 1.minutes * i).to_i, e] }
+    people_on_game.each_with_index { |e,i| data << [(from + 1.minutes * i).to_i * 1000, e] }
     
     LazyHighCharts::HighChart.new do |f|
-      f.chart type: :area,
-              animation: 'Highcharts.svg',
-              events: { load: %|
-                    function() {
-                        // set up the updating of the chart each second
-                        var series = this.series[0];
-                        setInterval(function() {
-                            var x = (new Date()).getTime(), // current time
-                                y = Math.random();
-                            series.addPoint([x, y], true, true);
-                        }, 1000);
-                    }|.js_code }
+      f.chart type: :area
+      # ,
+      #         animation: 'Highcharts.svg',
+      #         events: { load: js_set_interval }
       
       f.title    text: 'Статистика количества игроков в игре Шаранавты', x: -20
       f.subtitle text: "Онлайн #{data[-1][1]} шарик(ов). За последнее время пришло #{data[-1][1]-data[-2][1]}", x: -20
 
-      f.xAxis type: :datetime
+      f.xAxis type: :datetime, tickInterval: 1.minute.to_i * 1000, events: { load: js_set_interval }
 
-      f.yAxis title: {text: 'Количество шариков'}, 
-              plot_lines: [{ value: 0, width: 1, color: '#808080'}]
-              # { afterSetExtremes:
-              #     %|function(e) {
-              #       series = this.series[0];
-              #       setInterval(function() {
-              #         x = (new Date()).getTime() // current time
-              #         $.getJSON("/get_new_dot, function(data) {
-              #             y = data;
-              #           }
-              #         });
-              #         series.addPoint([x, y], true, true);
-              #       }, 60000); // 1 minute
-              #     }|.js_code
-              #   }
+      f.yAxis title: {text: 'Количество шариков'}, plot_lines: [{ value: 0, width: 1, color: '#808080'}]
 
       f.tooltip value_suffix: ' шарик(ов)'
 
@@ -66,5 +44,31 @@ class Chart
 
       f.series name: 'Шарики', data: data
     end
+  end
+
+  def js_set_integval
+    %| function(e) {
+        // set up the updating of the chart each second
+        var series = this.series[0];
+        setInterval(function() {
+            var x = (new Date()).getime(), // current time
+                y = Math.random();
+            series.addData([x, y]);
+        }, 1000); // 1 second
+    }|.js_code
+  end
+
+  def js_set_interval_with_get_json
+    %| function() {
+      series = this.series[0];
+      setInterval(function() {
+        x = (new Date()).getTime() // current time
+        $.getJSON("/get_new_dot, function(data) {
+            y = data;
+          }
+        });
+        series.addPoint([x, y], true, true);
+      }, 1000); // 1 second
+    }|.js_code
   end
 end

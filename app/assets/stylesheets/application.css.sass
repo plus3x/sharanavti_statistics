@@ -10,6 +10,19 @@
 //= require_self
 //= require_tree .
 
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+
+@mixin box-shadow($params)
+  box-shadow: $params
+  -o-box-shadow: $params
+  -ms-box-shadow: $params
+  -moz-box-shadow: $params
+  -webkit-box-shadow: $params
 
 html
   background-image: image_url('background_main.jpg')
@@ -17,20 +30,22 @@ html
 body
   margin: 100px 10%
   #banner
-    padding: 25px 0px 10px 25px
+    padding: 25px 0px 0px 250px
     margin: 0px
+    margin-bottom: 20px
     font: small-caps 42px/42px "Times New Roman", serif
     color: white
     text-align: center
-  #login
-    float: right
-    margin-right: 10px
-    margin-top: 10px
-    font: 15px/15px "Arial"
-    color: black
-    text-align: top-right
-    a
-      text-decoration: none
+    #login
+      padding: 10px
+      background: white
+      border: 1px solid #777
+      @include border-radius(10px)
+      @include box-shadow(2px 2px 2px #555)
+      float: right
+      font: 16px/16px "Arial"
+      color: black
+      text-align: top-right
     
   #columns
     #side
@@ -38,7 +53,8 @@ body
       width: 100%
       background: #aaf
       border: 1px solid #777
-      border-radius: 10px
+      @include border-radius(10px)
+      @include box-shadow(2px 2px 2px #555)
       ul
         padding: 5px 20px
         margin: 0 20px
@@ -63,7 +79,8 @@ body
     #main
       padding: 1em
       border: 1px solid #aaa
-      border-radius: 10px
+      @include border-radius(30px)
+      @include box-shadow(2px 2px 2px #555)
       background-color: white
     #copyright
       text-align: center

@@ -1,7 +1,5 @@
-%h1 Онлайн за день
-%div
-  / = high_chart 'chart', @chart
+%div#chart
   - if @sharics
     = high_chart 'sharics', @sharics
   - else
-    %h1 Нет данных из API!
+    %h1#fail Нет данных из API!

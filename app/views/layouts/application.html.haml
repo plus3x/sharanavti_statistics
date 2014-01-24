@@ -8,17 +8,17 @@
   %body
     #banner
       Онлайн статистика
-    #login
-      - if current_user
-        You may
-        = link_to t('sign_out'), logout_url, method: :delete
-        here.
-        %br
-        = "Hello #{current_user.email}"
+      #login
+        - if current_user
+          Вы можете
+          = link_to 'покинуть систему', logout_url, method: :delete
+          сдесь.
+          %br
+          = "Здравствуйте #{current_user.email}"
     #columns
-      #side
-        #ul
-          %li= link_to_unless_current 'Главная',  main_path
+      / #side
+      /   #ul
+      /     %li= link_to_unless_current 'Главная',  main_path
       #main
 
         = yield
