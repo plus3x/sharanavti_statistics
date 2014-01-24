@@ -9,4 +9,10 @@ class MainController < ApplicationController
     end
     @dynamic = Chart.dynamic
   end
+
+  # GET /new_dot
+  def new_dot
+    @people = Statistic.new_dot
+    render json: {x: Time.now, y: @people}
+  end
 end
