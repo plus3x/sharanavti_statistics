@@ -12,6 +12,7 @@ gem 'sqlite3'
 
 # For grafics
 gem 'lazy_high_charts'
+gem "highcharts-rails", "~> 3.0.0"
 
 # Use HAML for templates
 gem 'haml'

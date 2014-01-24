@@ -3,9 +3,10 @@ class MainController < ApplicationController
   # GET /
   def index
   	begin
-      @sharics = Chart.statistic(Time.now, Time.now + 4.hours)
+      @game_online = Chart.game_online(Time.now, Time.now + 4.hours)
     rescue
-      @sharics = nil
+      @game_online = nil
     end
+    @dynamic = Chart.dynamic
   end
 end
