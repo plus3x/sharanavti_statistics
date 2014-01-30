@@ -7,6 +7,10 @@ class Statistic < ActiveResource::Base
   end
 
   def self.new_dot
-    get(:new_dot) rescue nil
+      dot = get(:new_dot)
+      dot['x'] = dot['x'].to_datetime.to_i # for grafic
+      dot
+    rescue 
+      nil
   end
 end

@@ -29,19 +29,14 @@ class Chart
                       $("#difference").css({ color: color });
 
                       // Mark last point
-                      var current_time = (new Date()).getTime();
-
                       last_point.update({ marker: { enabled: true  } });
 
-                      console.log("New mark, new draw,last_point.y " + last_point.y);
-
                       setInterval(function() {
-                        var x = (new Date()).getTime(), // current time
                         color = '#0a0';
                         difference = 0;
 
                         $.getJSON("/new_dot", function(new_point) {
-                          series.addPoint([x , new_point]);
+                          series.addPoint([new_point.x , new_point.y]);
 
                           series_length = series.points.length;
                           last_point    = series.points[series_length - 1];
@@ -52,8 +47,6 @@ class Chart
 
                           difference = last_point.y - latest_point.y;
                           if (difference < 0) { color = '#c00'; }
-
-                          console.log( "New point: " + new_point + "(difference = " + difference + ", color = " + color + ")" );
 
                           $("#current").text( last_point.y );
                           $("#difference").text( difference );

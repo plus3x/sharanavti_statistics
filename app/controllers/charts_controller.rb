@@ -7,7 +7,7 @@ class ChartsController < ApplicationController
 
   # GET /new_dot
   def new_dot
-    @people = Statistic.new_dot
-    render json: @people
+    @dot = Statistic.new_dot
+    render json: @dot
   end
 end

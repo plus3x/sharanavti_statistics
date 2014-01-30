@@ -7,7 +7,7 @@ post '/statistics/between' do
   data = []
   from = params[:from].to_datetime.to_i
   to   = params[:to  ].to_datetime.to_i
-  (from..to).step(1.minutes) { |time| data << { x: time, y: Random.rand(20..200) }
+  (from..to).step(1.minutes) { |time| data << { x: time, y: Random.rand(20..200) } }
 
   puts "Array size: #{data.size}. First element: #{data.first}."
 
