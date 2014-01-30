@@ -1,0 +1,36 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+
+@mixin box-shadow($params)
+  box-shadow: $params
+  -o-box-shadow: $params
+  -ms-box-shadow: $params
+  -moz-box-shadow: $params
+  -webkit-box-shadow: $params
+
+#carrency
+  padding: 0 0 10px 0
+  background: white
+  border: 1px solid #09f
+  height: 50px
+  width: 150px
+  position: absolute
+  z-index: 1
+  margin: 45px 0 0 100px
+  text-align: center
+  @include border-radius(10px)
+  @include box-shadow(2px 2px 2px #aaa)
+  #current
+    font-size: 50px
+    color: #09f
+  #difference
+    font-size: 30px

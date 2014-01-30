@@ -1,5 +1,2 @@
-%div#chart
-  - if @dynamic
-    = high_chart 'dynamic', @dynamic
-  - else
-    %h1#fail Нет данных из API!
+#charts
+  = render template: 'charts/game_online'

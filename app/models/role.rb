@@ -7,7 +7,7 @@ class Role < ActiveRecord::Base
         true
       when 'client'
         request_to controller: [:sessions], action: [:new, :create, :destroy] or
-        request_to controller: [:main]
+        request_to controller: [:main, :charts]
       else
         false
       end
