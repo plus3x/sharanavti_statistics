@@ -10,8 +10,10 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  get 'game_online' => 'charts#game_online'
-  get 'new_dot' => 'charts#new_dot'
+  controller :statistics do
+    get 'new_dot'
+    get 'game_online'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
