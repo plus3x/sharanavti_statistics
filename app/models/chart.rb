@@ -98,11 +98,6 @@ class Chart
     game_online = API.game_online_select( from: from, to: to )
 
     return nil unless game_online
-    
-    game_online.map { |e| e['x'] *= 1000 } # for js highchart
-    
-    data = []
-    game_online.map { |e| data << e.each_value.to_a } # hash to array
 
     data = []
     game_online.each_with_index { |online, i| data << [ ((from.to_i + i.minutes.to_i) * 1000), online ] }
