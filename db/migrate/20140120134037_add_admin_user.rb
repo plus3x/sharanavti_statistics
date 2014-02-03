@@ -1,7 +1,6 @@
 class AddAdminUser < ActiveRecord::Migration
   def self.up
-    user = User.create! email: 'admin@admin.com', password: 'admin'
-    user.role = Role.find_by title: 'admin'
+    User.create! email: 'admin@admin.com', password: 'admin', role: Role.find_by(title: 'admin')
   end
 
   def self.down

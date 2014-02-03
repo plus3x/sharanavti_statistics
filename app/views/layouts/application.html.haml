@@ -2,6 +2,7 @@
 %html
   %head
     %title= @head_title || 'Онлайн статистика'
+    = favicon_link_tag
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -20,6 +21,9 @@
         %ul
           %li= link_to_unless_current 'Online', main_path
           %li= link_to_unless_current 'On date', on_date_path
+          - if (current_user.admin? rescue nil)
+            %li= link_to_unless_current 'Users', users_path
+
       #main
 
         = yield

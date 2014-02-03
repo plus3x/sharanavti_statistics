@@ -2,9 +2,8 @@ class User < ActiveRecord::Base
   belongs_to :role
   has_secure_password
   
-  before_validation on: :create do
-    self.email = email.downcase if attribute_present?('email')
-    self.role ||= Role.find_by(title: 'client')
+  before_validation do
+    email.downcase
   end
   
   validates_format_of   :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/
