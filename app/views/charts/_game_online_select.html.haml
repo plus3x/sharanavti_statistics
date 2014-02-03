@@ -2,7 +2,7 @@
   #select_date
     = form_tag game_online_select_url, method: :post, remote: true do
       %span#title Choose day:
-      = select_date params[:date]
+      = select_date Date.current
       = submit_tag 'Renew'
   - if @game_online_select
     #carrency
