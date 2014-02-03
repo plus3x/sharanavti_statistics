@@ -15,6 +15,11 @@ Rails.application.routes.draw do
     get 'game_online'
   end
 
+  controller :charts do
+    post 'game_online_select'
+    get 'on_date'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

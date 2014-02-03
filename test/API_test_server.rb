@@ -4,6 +4,8 @@ require 'active_support/core_ext/hash/conversions'
 
 # POST /api/stat.online.get?date_from=2013-10-15&date_to=2013-10-16
 post '/api/stat.online.get' do
+  puts "Params: #{params}"
+
   from = params[:date_from].to_datetime.to_i
   to   = params[:date_to  ].to_datetime.to_i
 

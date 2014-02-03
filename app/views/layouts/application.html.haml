@@ -16,9 +16,10 @@
           %br
           = "Здравствуйте #{current_user.email}"
     #columns
-      / #side
-      /   #ul
-      /     %li= link_to_unless_current 'Главная',  main_path
+      #side
+        %ul
+          %li= link_to_unless_current 'Online', main_path
+          %li= link_to_unless_current 'On date', on_date_path
       #main
 
         = yield

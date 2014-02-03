@@ -17,44 +17,55 @@
   -moz-box-shadow: $params
   -webkit-box-shadow: $params
 
-#carrency
-  padding: 0 0 10px 0
-  background: white
-  border: 1px solid #09f
-  height: 50px
-  width: 150px
-  position: absolute
-  z-index: 1
-  margin: 45px 0 0 100px
-  text-align: center
-  @include border-radius(10px)
-  @include box-shadow(2px 2px 2px #aaa)
-  #current
-    font-size: 50px
-    color: #09f
-  #difference
-    font-size: 30px
-    &:before
-      display: none
-      content: " "
-      left: 67%
-      border: solid transparent
-      position: absolute
-      border-top-color: #c00
-      border-width: 15px
-      border-bottom-width: 0px
-      bottom: 63%
-      margin-top: -25px
-      z-index: inherit
-    &:after
-      display: none
-      content: " "
-      left: 67%
-      border: solid transparent
-      position: absolute
-      border-bottom-color: #0c0
-      border-width: 15px
-      border-top-width: 0px
-      bottom: 63%
-      margin-top: -25px
-      z-index: inherit
+#chart
+  #carrency
+    padding: 0 0 10px 0
+    background: white
+    border: 1px solid #09f
+    height: 50px
+    width: 150px
+    position: absolute
+    z-index: 1
+    margin: 45px 0 0 100px
+    text-align: center
+    @include border-radius(10px)
+    @include box-shadow(2px 2px 2px #aaa)
+    #current
+      font-size: 50px
+      color: #09f
+    #difference
+      font-size: 30px
+
+#select_chart
+  #select_date
+    position: absolute
+    margin: 0 0 0 10px
+    border: 1px solid #09f
+    z-index: 1
+    padding: 5px
+    @include border-radius(5px)
+    #title
+      font-weight: bold
+  #carrency
+    padding: 10px 0 10px 0
+    background: white
+    border: 1px solid #09f
+    height: 80px
+    width: 150px
+    position: absolute
+    z-index: 1
+    margin: 45px 0 0 100px
+    text-align: center
+    @include border-radius(10px)
+    @include box-shadow(2px 2px 2px #aaa)
+    #title
+      padding: 0
+      margin: 0
+    .name
+      color: #09f
+    #average
+      color: #c60
+    #min
+      color: #c00 
+    #max
+      color: #0a0

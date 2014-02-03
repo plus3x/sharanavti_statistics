@@ -7,7 +7,6 @@
 
 # @after_load_online_updating = after_load_online_updating = ()->
 
-
 #   console.log "this" + this
 #   console.log "game_online text" + $('game_online').text()
 
