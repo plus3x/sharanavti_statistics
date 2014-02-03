@@ -1,0 +1,8 @@
+#chart
+  #carrency
+    %span#current 0
+    %span#difference 0
+  - if @game_online
+    = high_chart 'game_online', @game_online
+  - else
+    %h1#fail Нет данных из API!

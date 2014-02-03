@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Shararam3D-Site/!svn/ver/258/statistics/q/conf
+END
+authz
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Shararam3D-Site/!svn/ver/258/statistics/q/conf/authz
+END
+svnserve.conf
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Shararam3D-Site/!svn/ver/258/statistics/q/conf/svnserve.conf
+END
+passwd
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Shararam3D-Site/!svn/ver/258/statistics/q/conf/passwd
+END

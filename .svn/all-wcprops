@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Shararam3D-Site/!svn/ver/258/statistics
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Shararam3D-Site/!svn/ver/258/statistics/.gitignore
+END
+.gitattributes
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Shararam3D-Site/!svn/ver/258/statistics/.gitattributes
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Shararam3D-Site/!svn/ver/258/statistics/Gemfile
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config.ru
+END
+Gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Shararam3D-Site/!svn/ver/258/statistics/Gemfile.lock
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Shararam3D-Site/!svn/ver/258/statistics/Rakefile
+END
+Gemfile (Shubuntu's conflicted copy 2014-01-21).lock
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Shararam3D-Site/!svn/ver/258/statistics/Gemfile%20(Shubuntu's%20conflicted%20copy%202014-01-21).lock
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Shararam3D-Site/!svn/ver/258/statistics/README.rdoc
+END

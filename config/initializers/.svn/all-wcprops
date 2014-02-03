@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/session_store.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/backtrace_silencers.rb
+END
+filter_parameter_logging.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/filter_parameter_logging.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/mime_types.rb
+END
+wrap_parameters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/wrap_parameters.rb
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/inflections.rb
+END
