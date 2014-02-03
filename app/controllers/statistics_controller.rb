@@ -8,7 +8,7 @@ class StatisticsController < ApplicationController
 
   # GET /game_online
   def game_online
-  	@game_online = API.game_online_select( 12.hours.ago, Time.now )
+  	@game_online = API.game_online_select( 24.hours.ago, Time.now )
     render json: @game_online
   end
 end
