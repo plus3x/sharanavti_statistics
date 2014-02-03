@@ -10,7 +10,7 @@ post '/api/stat.online.get' do
   to   = params[:date_to  ].to_datetime.to_i
 
   data = []
-  (from..to).step(1.minutes) { |time| data << Random.rand(200..1000) }
+  (from..to).step(1.minutes) { |time| data << Random.rand(0..1000) }
 
   puts "Array size: #{data.size}. Last element: #{data.last}."
 

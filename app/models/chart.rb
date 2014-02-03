@@ -5,12 +5,12 @@ class Chart
     from = 24.hours.ago
     to   = Time.now
 
-    game_online = API.game_online_select(from: from, to: to)
+    game_online = API.game_online_select( from: from, to: to )
 
     return nil unless game_online
 
     data = []
-    game_online.each_with_index { |online, i| data << [ ((from.to_i + i.minutes.to_i) * 1000), online ] }
+    game_online.each_with_index { |online, i| data << [ ((from.to_i + i.minutes.to_i + 4.hours) * 1000), online ] }
 
     LazyHighCharts::HighChart.new :game_online do |f|
       f.chart type: :area,
@@ -40,15 +40,10 @@ class Chart
                         color = '#0a0';
                         difference = 0;
 
-                        $.getJSON("/new_dot" )
+                        $.getJSON("/new_dot")
                           .fail( function() { console.log("API not response!"); } )
-                          .done( function( y ) { 
-                            // iso8601 to integer(time)
-                            // var date = new Date();
-                            // date = Date(new_point.x);
-                            // var x = new Date(date).getTime();
-
-                            x = (new Date()).getTime();
+                          .done( function( y ) {
+                            var x = (new Date()).getTime() + #{4.hours * 1000};
 
                             series.addPoint([ x, y ]);
 
@@ -56,6 +51,7 @@ class Chart
                             last_point    = series.points[series_length - 1];
                             latest_point  = series.points[series_length - 2];
 
+                            // Mark last point
                             latest_point.update({ marker: { enabled: false } });
                               last_point.update({ marker: { enabled:  true } });
 
