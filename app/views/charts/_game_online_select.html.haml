@@ -2,8 +2,8 @@
   #select_date
     = form_tag game_online_select_url, method: :post, remote: true do
       %span#title Choose day:
-      = select_date @date ||= Date.current, onChange: 'this.form.submit()'
-      = submit_tag 'Get period', hidden: true
+      = select_date @date ||= Date.current
+      = submit_tag 'Get period'
   - if @game_online_select
     #carrency
       %span#title Period data:
