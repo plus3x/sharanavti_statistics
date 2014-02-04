@@ -1,19 +1,20 @@
-#select_chart
-  #select_date
-    = form_tag game_online_select_url, method: :post, remote: true do
-      %span#title Choose day:
-      = select_date @date ||= Date.current
-      = submit_tag 'Get period'
-  - if @game_online_select
-    #carrency
-      %span#title Period data:
-      %span.name Average:
-      %span#average 0
-      %span.name Max:
-      %span#max 0
-      %span.name Min:
-      %span#min 0
-    #chart
-      = high_chart 'game_online_select', @game_online_select
-  - else
-    %h1#fail Period no have data!
+- cache @game_online_select do
+  #select_chart
+    #select_date
+      = form_tag game_online_select_url, method: :post, remote: true do
+        %span#title Choose day:
+        = select_date @date ||= Date.current
+        = submit_tag 'Get period'
+    - if @game_online_select
+      #carrency
+        %span#title Period data:
+        %span.name Average:
+        %span#average 0
+        %span.name Max:
+        %span#max 0
+        %span.name Min:
+        %span#min 0
+      #chart
+        = high_chart 'game_online_select', @game_online_select
+    - else
+      %h1#fail Period no have data!

@@ -9,6 +9,5 @@ class ChartsController < ApplicationController
   def game_online_select
     @date = Date.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i)
     @game_online_select = Chart.game_online_select_date( @date )
-    params[:date] = nil
   end
 end
