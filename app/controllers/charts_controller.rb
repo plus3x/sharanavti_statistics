@@ -3,6 +3,7 @@ class ChartsController < ApplicationController
   # GET /on_date
   def on_date
     @game_online_select = Chart.game_online_select_date(Date.current)
+    @date = Date.current
   end
 
   # GET /chart/game_online_select?date=2013-12-01

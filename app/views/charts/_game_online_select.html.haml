@@ -1,9 +1,9 @@
-- cache @game_online_select do
+- cache @date do
   #select_chart
     #select_date
       = form_tag game_online_select_url, method: :post, remote: true do
         %span#title Choose day:
-        = select_date @date ||= Date.current
+        = select_date @date
         = submit_tag 'Get period'
     - if @game_online_select
       #carrency
