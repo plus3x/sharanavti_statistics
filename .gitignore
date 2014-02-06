@@ -18,3 +18,4 @@
 # Ignore SVN
 .svn
 /q
+.svn*
