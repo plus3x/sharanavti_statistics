@@ -1797,3 +1797,1203 @@ Processing by StatisticsController#new_dot as JSON
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
   [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
 Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:52:40 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/on_date" for 10.10.3.143 at 2014-02-06 14:53:06 +0400
+Processing by ChartsController#on_date as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered charts/_game_online_select.html.haml (253.4ms)
+  Rendered charts/on_date.haml within layouts/application (283.2ms)
+Completed 200 OK in 408ms (Views: 327.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:53:40 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 34ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.10.3.143 at 2014-02-06 14:54:22 +0400
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered charts/_game_online.html.haml (80.4ms)
+  Rendered main/index.html.haml within layouts/application (120.2ms)
+Completed 200 OK in 215ms (Views: 156.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/on_date" for 10.10.3.143 at 2014-02-06 14:54:23 +0400
+Processing by ChartsController#on_date as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (9.4ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered charts/_game_online_select.html.haml (54.4ms)
+  Rendered charts/on_date.haml within layouts/application (73.4ms)
+Completed 200 OK in 182ms (Views: 112.0ms | ActiveRecord: 10.1ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:54:40 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:55:23 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 38ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:55:41 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 32ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:56:23 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 42ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:56:41 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 39ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:57:23 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:57:41 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:58:23 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:58:41 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 38ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:59:23 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 44ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:59:41 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 41ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 15:00:23 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 15:00:41 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (4.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 55ms (Views: 0.1ms | ActiveRecord: 4.6ms)
+DEPRECATION WARNING: The cattr_* method definitions have been moved into active_support/core_ext/module/attribute_accessors. Please require that instead. (called from block in tsort_each at /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:226)
+
+
+Started GET "/" for 10.10.3.143 at 2014-02-06 16:26:33 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered charts/_game_online.html.haml (2.0ms)
+  Rendered main/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 617ms (Views: 344.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.10.3.143 at 2014-02-06 16:26:36 +0400
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered charts/_game_online.html.haml (0.1ms)
+  Rendered main/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 61ms (Views: 30.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/main.css?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/charts.css?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/application.css?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/users.css?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/chart.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/main.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/sessions.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/users.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/highcharts/highcharts.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/highcharts/highcharts-more.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/highcharts/modules/exporting.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/application.js?body=1" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/assets/background_main.jpg" for 10.10.3.143 at 2014-02-06 16:26:37 +0400
+
+
+Started GET "/users" for 10.10.3.143 at 2014-02-06 16:26:43 +0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered users/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 62ms (Views: 50.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 10.10.3.143 at 2014-02-06 16:26:45 +0400
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (97.0ms)
+  Rendered users/new.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 124ms (Views: 118.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 10.10.3.143 at 2014-02-06 16:27:15 +0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n3hPNUdKffeO39F3F3MSum1OSaI8VVkS5HCZ7TUSNME=", "user"=>{"email"=>"vladislav.petrov@nw-media.ru", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"1"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "role_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-02-06 12:27:15.916391"], ["email", "vladislav.petrov@nw-media.ru"], ["password_digest", "$2a$10$527siMAsFrUY2vjqDmxskepRr0P2xnY14kLySaCn7VtFi3Fdsj3Ay"], ["role_id", 1], ["updated_at", "2014-02-06 12:27:15.916391"]]
+  [1m[35m (46.0ms)[0m  commit transaction
+Redirected to http://10.10.3.148:3000/users/2
+Completed 302 Found in 203ms (ActiveRecord: 47.4ms)
+
+
+Started GET "/users/2" for 10.10.3.143 at 2014-02-06 16:27:15 +0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 44ms (Views: 31.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/charts.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/application.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/users.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/main.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/sessions.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/chart.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/main.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/sessions.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/users.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/highcharts/highcharts.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/highcharts/highcharts-more.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/highcharts/modules/exporting.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/application.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/assets/background_main.jpg" for 10.10.3.143 at 2014-02-06 16:27:16 +0400
+
+
+Started GET "/users" for 10.10.3.143 at 2014-02-06 16:27:19 +0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered users/index.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 200ms (Views: 184.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/on_date" for 10.10.3.143 at 2014-02-06 16:27:22 +0400
+Processing by ChartsController#on_date as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered charts/_game_online_select.html.haml (30.3ms)
+  Rendered charts/on_date.haml within layouts/application (38.6ms)
+Completed 200 OK in 86ms (Views: 62.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.10.3.143 at 2014-02-06 16:27:23 +0400
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered charts/_game_online.html.haml (1.8ms)
+  Rendered main/index.html.haml within layouts/application (17.0ms)
+Completed 200 OK in 46ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/on_date" for 10.10.3.143 at 2014-02-06 16:27:24 +0400
+Processing by ChartsController#on_date as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (1.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered charts/_game_online_select.html.haml (7.0ms)
+  Rendered charts/on_date.haml within layouts/application (13.4ms)
+Completed 200 OK in 54ms (Views: 36.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/on_date" for 10.10.3.143 at 2014-02-06 16:27:40 +0400
+Processing by ChartsController#on_date as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered charts/_game_online_select.html.haml (52.8ms)
+  Rendered charts/on_date.haml within layouts/application (63.2ms)
+Completed 200 OK in 224ms (Views: 107.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/main.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/application.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/sessions.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/users.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/charts.css?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/chart.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/main.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/sessions.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/users.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/highcharts/highcharts.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/highcharts/highcharts-more.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/highcharts/modules/exporting.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/application.js?body=1" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/background_main.jpg" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/assets/favicon.ico" for 10.10.3.143 at 2014-02-06 16:27:41 +0400
+
+
+Started GET "/" for 10.10.3.143 at 2014-02-06 16:27:43 +0400
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered charts/_game_online.html.haml (26.0ms)
+  Rendered main/index.html.haml within layouts/application (34.5ms)
+Completed 200 OK in 86ms (Views: 51.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/on_date" for 10.10.3.143 at 2014-02-06 16:27:45 +0400
+Processing by ChartsController#on_date as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered charts/_game_online_select.html.haml (53.2ms)
+  Rendered charts/on_date.haml within layouts/application (65.9ms)
+Completed 200 OK in 123ms (Views: 98.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.10.3.143 at 2014-02-06 16:27:49 +0400
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered charts/_game_online.html.haml (33.5ms)
+  Rendered main/index.html.haml within layouts/application (36.1ms)
+Completed 200 OK in 87ms (Views: 62.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 10.10.3.143 at 2014-02-06 16:27:51 +0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered users/index.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:28:43 +0400
+
+LoadError (cannot load such file -- /home/quick/Dropbox/svn/Shararam3D-Site/statistics/config/routes.rb):
+  activesupport (4.1.0.beta1) lib/active_support/dependencies.rb:241:in `load'
+  activesupport (4.1.0.beta1) lib/active_support/dependencies.rb:241:in `block in load'
+  activesupport (4.1.0.beta1) lib/active_support/dependencies.rb:232:in `load_dependency'
+  activesupport (4.1.0.beta1) lib/active_support/dependencies.rb:241:in `load'
+  railties (4.1.0.beta1) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.1.0.beta1) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.1.0.beta1) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.1.0.beta1) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.1.0.beta1) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.1.0.beta1) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.1.0.beta1) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.1.0.beta1) lib/rails/application/finisher.rb:83:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:438:in `instance_exec'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:438:in `block in make_lambda'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:184:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:184:in `block in simple'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.7ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (113.8ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:28:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (8.8ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (27.6ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:29:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (8.0ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:29:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (16.0ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:30:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (22.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:30:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (10.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:31:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (13.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:31:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (14.8ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:32:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (15.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:32:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (14.9ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:33:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (9.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:33:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (8.8ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:34:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (15.9ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:34:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (12.8ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:35:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (13.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:35:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (17.0ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:36:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (22.1ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:36:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (17.8ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:37:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (23.8ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:37:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (21.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:38:43 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (17.5ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 16:38:49 +0400
+
+ActionController::RoutingError (No route matches [POST] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (19.2ms)
