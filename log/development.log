@@ -1668,3 +1668,132 @@ Processing by ChartsController#on_date as HTML
   Rendered charts/_game_online_select.html.haml (52.9ms)
   Rendered charts/on_date.haml within layouts/application (67.5ms)
 Completed 200 OK in 138ms (Views: 89.2ms | ActiveRecord: 0.6ms)
+DEPRECATION WARNING: The cattr_* method definitions have been moved into active_support/core_ext/module/attribute_accessors. Please require that instead. (called from block in tsort_each at /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:226)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:48:12 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 499ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/new_dot" for 10.10.3.143 at 2014-02-06 14:48:32 +0400
+
+ActionController::RoutingError (No route matches [GET] "/new_dot"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.6ms)
+  Rendered /home/quick/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (83.0ms)
+
+
+Started GET "/" for 10.10.3.143 at 2014-02-06 14:48:39 +0400
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered charts/_game_online.html.haml (53.5ms)
+  Rendered main/index.html.haml within layouts/application (75.7ms)
+Completed 200 OK in 591ms (Views: 522.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/main.css?body=1" for 10.10.3.143 at 2014-02-06 14:48:39 +0400
+
+
+Started GET "/assets/sessions.css?body=1" for 10.10.3.143 at 2014-02-06 14:48:39 +0400
+
+
+Started GET "/assets/application.css?body=1" for 10.10.3.143 at 2014-02-06 14:48:39 +0400
+
+
+Started GET "/assets/users.css?body=1" for 10.10.3.143 at 2014-02-06 14:48:39 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.10.3.143 at 2014-02-06 14:48:39 +0400
+
+
+Started GET "/assets/charts.css?body=1" for 10.10.3.143 at 2014-02-06 14:48:39 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:39 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/chart.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/main.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/sessions.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/users.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/highcharts/highcharts.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/highcharts/highcharts-more.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/highcharts/modules/exporting.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/application.js?body=1" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/background_main.jpg" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started GET "/assets/favicon.ico" for 10.10.3.143 at 2014-02-06 14:48:40 +0400
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:49:40 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:50:40 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 45ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/new_dot" for 10.10.3.143 at 2014-02-06 14:51:40 +0400
+Processing by StatisticsController#new_dot as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 0.5ms)

@@ -41,28 +41,26 @@ class Chart
                         color = '#0a0';
                         difference = 0;
 
-                        $.getJSON("/new_dot")
-                          .fail( function() { console.log("API not response!"); } )
-                          .done( function( y ) {
-                            var x = (new Date()).getTime() + #{4.hours * 1000};
+                        $.post("/new_dot", "", function( y ) {
+                          var x = (new Date()).getTime() + #{4.hours * 1000};
 
-                            series.addPoint([ x, y ]);
+                          series.addPoint([ x, y ]);
 
-                            series_length = series.points.length;
-                            last_point    = series.points[series_length - 1];
-                            latest_point  = series.points[series_length - 2];
+                          series_length = series.points.length;
+                          last_point    = series.points[series_length - 1];
+                          latest_point  = series.points[series_length - 2];
 
-                            // Mark last point
-                            latest_point.update({ marker: { enabled: false } });
-                              last_point.update({ marker: { enabled:  true } });
+                          // Mark last point
+                          latest_point.update({ marker: { enabled: false } });
+                            last_point.update({ marker: { enabled:  true } });
 
-                            // Update currency
-                            difference = last_point.y - latest_point.y;
-                            if (difference < 0) { color = '#c00'; }
-                            $("#current").text( last_point.y );
-                            $("#difference").text( difference );
-                            $("#difference").css({ color: color });
-                          });
+                          // Update currency
+                          difference = last_point.y - latest_point.y;
+                          if (difference < 0) { color = '#c00'; }
+                          $("#current").text( last_point.y );
+                          $("#difference").text( difference );
+                          $("#difference").css({ color: color });
+                        }, 'json');
                       }, #{1.minute * 1000});
                     }|.js_code
               }

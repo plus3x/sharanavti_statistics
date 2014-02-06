@@ -11,13 +11,13 @@ Rails.application.routes.draw do
   end
 
   controller :statistics do
-    get 'new_dot'
-    get 'game_online'
+    post 'new_dot'
+    get  'game_online'
   end
 
   controller :charts do
     post 'game_online_select'
-    get 'on_date'
+    get  'on_date'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

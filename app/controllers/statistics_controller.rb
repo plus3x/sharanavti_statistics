@@ -1,6 +1,6 @@
 class StatisticsController < ApplicationController
 
-  # GET /new_dot
+  # POST /new_dot
   def new_dot
     @dot = API.game_online_dot
     render json: @dot
