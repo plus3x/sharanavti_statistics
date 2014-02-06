@@ -1,2 +1,0 @@
-#charts
-  = render template: 'charts/_game_online'

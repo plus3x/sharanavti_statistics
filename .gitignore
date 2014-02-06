@@ -16,8 +16,5 @@
 /tmp
 
 # Ignore SVN
-.svn
-/q
-.svn*
-*/.svn*
-db/.svn
+*.svn*
+q
