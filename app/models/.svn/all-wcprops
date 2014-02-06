@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/models
+/svn/Shararam3D-Site/!svn/ver/260/statistics/app/models
 END
 user.rb
 K 25
@@ -19,7 +19,7 @@ chart.rb
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/models/chart.rb
+/svn/Shararam3D-Site/!svn/ver/260/statistics/app/models/chart.rb
 END
 role.rb
 K 25

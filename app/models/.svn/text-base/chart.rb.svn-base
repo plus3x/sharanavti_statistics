@@ -7,8 +7,6 @@ class Chart
 
     game_online = API.game_online_select( from: from, to: to )
 
-    puts "Game online", game_online
-
     return nil unless game_online
 
     data = []
@@ -82,7 +80,7 @@ class Chart
       f.plot_options area: {
                   fill_color: { linear_gradient: { x1: 0, y1: 0, x2: 0, y2: 1}, stops: [[0, '#09f'],[1, '#0df']] },
                   line_width: 1,
-                  marker: { symbol: :square, fillColor: "#93c", radius: 6, enabled: false },
+                  marker: { symbol: :circle, fillColor: "#93c", radius: 6, enabled: false },
                   shadow: false,
                   states: { hover: { line_width: 1 } },
                   threshold: nil

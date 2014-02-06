@@ -31,5 +31,5 @@ Rails.application.configure do
   # Include '.json' on end of path or not
   config.active_resource.include_format_in_path = false
   # Set default site
-  config.active_resource.site = 'http://10.10.3.0:8070' # 'http://localhost:4567'
+  config.active_resource.site = 'http://localhost:4567' # 'http://10.10.3.0:8070'
 end

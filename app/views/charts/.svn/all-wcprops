@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/charts
+/svn/Shararam3D-Site/!svn/ver/262/statistics/app/views/charts
+END
+on_date.haml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/charts/on_date.haml
 END
 _game_online_select.html.haml
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/charts/_game_online_select.html.haml
+/svn/Shararam3D-Site/!svn/ver/264/statistics/app/views/charts/_game_online_select.html.haml
 END
 game_online_select.js.erb
 K 25
@@ -19,11 +25,5 @@ _game_online.html.haml
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/charts/_game_online.html.haml
-END
-on_date.haml
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/charts/on_date.haml
+/svn/Shararam3D-Site/!svn/ver/260/statistics/app/views/charts/_game_online.html.haml
 END

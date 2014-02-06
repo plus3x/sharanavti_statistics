@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 56
 /svn/Shararam3D-Site/!svn/ver/258/statistics/test/models
 END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Shararam3D-Site/!svn/ver/258/statistics/test/models/user_test.rb
+END
 .keep
 K 25
 svn:wc:ra_dav:version-url
@@ -14,10 +20,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 69
 /svn/Shararam3D-Site/!svn/ver/258/statistics/test/models/role_test.rb
-END
-user_test.rb
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/Shararam3D-Site/!svn/ver/258/statistics/test/models/user_test.rb
 END

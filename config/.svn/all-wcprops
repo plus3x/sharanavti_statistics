@@ -1,13 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 51
-/svn/Shararam3D-Site/!svn/ver/258/statistics/config
-END
-secrets.yml
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/svn/Shararam3D-Site/!svn/ver/258/statistics/config/secrets.yml
+/svn/Shararam3D-Site/!svn/ver/262/statistics/config
 END
 routes.rb
 K 25
@@ -38,4 +32,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 66
 /svn/Shararam3D-Site/!svn/ver/258/statistics/config/environment.rb
+END
+secrets.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/secrets.yml
 END

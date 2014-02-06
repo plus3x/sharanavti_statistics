@@ -1,7 +1,7 @@
 10
 
 dir
-258
+263
 https://10.10.3.0:8443/svn/Shararam3D-Site/statistics/vendor/assets/javascripts/highcharts/stock/adapters
 https://10.10.3.0:8443/svn/Shararam3D-Site
 
@@ -26,47 +26,13 @@ vpetrov
 
 f643d5f7-0b65-4dde-9d70-d1a1fb5a545e
 
-mootools-adapter.js
-file
-
-
-
-
-2014-01-24T14:01:45.150147Z
-b048980d39245111b541d1d1cf42d06e
-2014-02-03T17:21:26.978090Z
-258
-vpetrov
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2384
-
 prototype-adapter.js
 file
 
 
 
 
-2014-01-24T14:01:45.546147Z
+2014-02-04T11:13:12.000000Z
 3239be8243706eb97d7ae5931115faa4
 2014-02-03T17:21:26.978090Z
 258
@@ -93,4 +59,38 @@ vpetrov
 
 
 3308
+
+mootools-adapter.js
+file
+
+
+
+
+2014-02-04T11:13:12.000000Z
+b048980d39245111b541d1d1cf42d06e
+2014-02-03T17:21:26.978090Z
+258
+vpetrov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2384
 

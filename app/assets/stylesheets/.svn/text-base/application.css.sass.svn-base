@@ -38,9 +38,10 @@ html
   background: black image_url('background_main.jpg') no-repeat center top
 
 body
-  margin: 10px 10%
+  margin: 0 5%
+  height: 100%
   #banner
-    padding: 25px 0px 0px 280px
+    padding: 15px 0px 0px 280px
     margin: 0px
     margin-bottom: 20px
     font: small-caps 42px/42px "Times New Roman", serif

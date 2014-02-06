@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 64
 /svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers
 END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/inflections.rb
+END
 session_store.rb
 K 25
 svn:wc:ra_dav:version-url
@@ -32,10 +38,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 83
 /svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/wrap_parameters.rb
-END
-inflections.rb
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/svn/Shararam3D-Site/!svn/ver/258/statistics/config/initializers/inflections.rb
 END

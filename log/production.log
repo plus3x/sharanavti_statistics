@@ -1,0 +1,259 @@
+I, [2014-02-04T15:21:16.886059 #15308]  INFO -- : Migrating to CreateUsers (20140120114246)
+I, [2014-02-04T15:21:16.914664 #15308]  INFO -- : Migrating to CreateRoles (20140120115644)
+I, [2014-02-04T15:21:16.940334 #15308]  INFO -- : Migrating to AddRoleToUser (20140120115732)
+I, [2014-02-04T15:21:16.964306 #15308]  INFO -- : Migrating to AddDefaultRoles (20140120133118)
+I, [2014-02-04T15:21:17.020860 #15308]  INFO -- : Migrating to AddAdminUser (20140120134037)
+E, [2014-02-04T15:21:17.252284 #15308] ERROR -- : Binary data inserted for `string` type on column `password_digest`
+I, [2014-02-04T15:21:35.817630 #15318]  INFO -- : Started GET "/on_date" for 10.10.3.143 at 2014-02-04 15:21:35 +0400
+I, [2014-02-04T15:21:35.830168 #15318]  INFO -- : Processing by ChartsController#on_date as HTML
+I, [2014-02-04T15:21:35.907214 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (15.9ms)
+I, [2014-02-04T15:21:35.908305 #15318]  INFO -- :   Rendered charts/on_date.haml within layouts/application (20.0ms)
+I, [2014-02-04T15:21:35.923529 #15318]  INFO -- : Completed 200 OK in 93ms (Views: 37.6ms | ActiveRecord: 3.8ms)
+I, [2014-02-04T15:21:35.938471 #15318]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.143 at 2014-02-04 15:21:35 +0400
+I, [2014-02-04T15:21:35.965551 #15318]  INFO -- : Started GET "/assets/application-41289874eff3b95a5e07d88ed94836c1.css" for 10.10.3.143 at 2014-02-04 15:21:35 +0400
+I, [2014-02-04T15:21:35.979083 #15318]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.143 at 2014-02-04 15:21:35 +0400
+I, [2014-02-04T15:21:40.300928 #15318]  INFO -- : Started POST "/game_online_select" for 10.10.3.143 at 2014-02-04 15:21:40 +0400
+I, [2014-02-04T15:21:40.302948 #15318]  INFO -- : Processing by ChartsController#game_online_select as JS
+I, [2014-02-04T15:21:40.303271 #15318]  INFO -- :   Parameters: {"utf8"=>"✓", "date"=>{"year"=>"2014", "month"=>"2", "day"=>"3"}, "commit"=>"Get period"}
+I, [2014-02-04T15:21:40.368170 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (24.0ms)
+I, [2014-02-04T15:21:40.370629 #15318]  INFO -- :   Rendered charts/game_online_select.js.erb (34.7ms)
+I, [2014-02-04T15:21:40.371158 #15318]  INFO -- : Completed 200 OK in 68ms (Views: 44.9ms | ActiveRecord: 0.6ms)
+I, [2014-02-04T15:21:42.028888 #15318]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 15:21:42 +0400
+I, [2014-02-04T15:21:42.031623 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T15:21:42.060753 #15318]  INFO -- :   Rendered charts/_game_online.html.haml (5.7ms)
+I, [2014-02-04T15:21:42.061352 #15318]  INFO -- :   Rendered main/index.html.haml within layouts/application (9.1ms)
+I, [2014-02-04T15:21:42.063175 #15318]  INFO -- : Completed 200 OK in 31ms (Views: 13.3ms | ActiveRecord: 0.6ms)
+I, [2014-02-04T15:21:43.066970 #15318]  INFO -- : Started GET "/on_date" for 10.10.3.143 at 2014-02-04 15:21:43 +0400
+I, [2014-02-04T15:21:43.070940 #15318]  INFO -- : Processing by ChartsController#on_date as HTML
+I, [2014-02-04T15:21:43.112609 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (9.9ms)
+I, [2014-02-04T15:21:43.113305 #15318]  INFO -- :   Rendered charts/on_date.haml within layouts/application (13.1ms)
+I, [2014-02-04T15:21:43.116080 #15318]  INFO -- : Completed 200 OK in 44ms (Views: 17.5ms | ActiveRecord: 0.7ms)
+I, [2014-02-04T15:21:45.359313 #15318]  INFO -- : Started POST "/game_online_select" for 10.10.3.143 at 2014-02-04 15:21:45 +0400
+I, [2014-02-04T15:21:45.360443 #15318]  INFO -- : Processing by ChartsController#game_online_select as JS
+I, [2014-02-04T15:21:45.360520 #15318]  INFO -- :   Parameters: {"utf8"=>"✓", "date"=>{"year"=>"2014", "month"=>"2", "day"=>"3"}, "commit"=>"Get period"}
+I, [2014-02-04T15:21:45.406625 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (22.6ms)
+I, [2014-02-04T15:21:45.408693 #15318]  INFO -- :   Rendered charts/game_online_select.js.erb (25.0ms)
+I, [2014-02-04T15:21:45.409110 #15318]  INFO -- : Completed 200 OK in 48ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T15:21:50.369534 #15318]  INFO -- : Started POST "/game_online_select" for 10.10.3.143 at 2014-02-04 15:21:50 +0400
+I, [2014-02-04T15:21:50.371535 #15318]  INFO -- : Processing by ChartsController#game_online_select as JS
+I, [2014-02-04T15:21:50.371900 #15318]  INFO -- :   Parameters: {"utf8"=>"✓", "date"=>{"year"=>"2014", "month"=>"2", "day"=>"2"}, "commit"=>"Get period"}
+I, [2014-02-04T15:21:50.426616 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (27.9ms)
+I, [2014-02-04T15:21:50.428893 #15318]  INFO -- :   Rendered charts/game_online_select.js.erb (30.4ms)
+I, [2014-02-04T15:21:50.429303 #15318]  INFO -- : Completed 200 OK in 57ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T16:25:21.572781 #15318]  INFO -- : Started GET "/" for 10.10.3.4 at 2014-02-04 16:25:21 +0400
+I, [2014-02-04T16:25:21.587197 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T16:25:21.610050 #15318]  INFO -- : Redirected to http://10.10.3.148:3000/login
+I, [2014-02-04T16:25:21.610502 #15318]  INFO -- : Filter chain halted as :authorize rendered or redirected
+I, [2014-02-04T16:25:21.611025 #15318]  INFO -- : Completed 302 Found in 23ms (ActiveRecord: 8.9ms)
+I, [2014-02-04T16:25:21.847964 #15318]  INFO -- : Started GET "/login" for 10.10.3.4 at 2014-02-04 16:25:21 +0400
+I, [2014-02-04T16:25:21.850180 #15318]  INFO -- : Processing by SessionsController#new as HTML
+I, [2014-02-04T16:25:21.889430 #15318]  INFO -- :   Rendered sessions/new.html.haml within layouts/application (17.0ms)
+I, [2014-02-04T16:25:21.898320 #15318]  INFO -- : Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+I, [2014-02-04T16:25:21.928867 #15318]  INFO -- : Started GET "/assets/application-41289874eff3b95a5e07d88ed94836c1.css" for 10.10.3.4 at 2014-02-04 16:25:21 +0400
+I, [2014-02-04T16:25:21.932624 #15318]  INFO -- : Started GET "/assets/favicon-becc004ac5ebde46c3b93e9baa51b50a.ico" for 10.10.3.4 at 2014-02-04 16:25:21 +0400
+I, [2014-02-04T16:25:21.956923 #15318]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.4 at 2014-02-04 16:25:21 +0400
+I, [2014-02-04T16:25:22.039866 #15318]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.4 at 2014-02-04 16:25:22 +0400
+I, [2014-02-04T16:25:23.366415 #15318]  INFO -- : Started POST "/login" for 10.10.3.4 at 2014-02-04 16:25:23 +0400
+I, [2014-02-04T16:25:23.369010 #15318]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T16:25:23.369413 #15318]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"IQBSQFUpM2QJ8AeTNRRPuocYJW4//jGi7D4/CvYu1wU=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T16:25:23.620932 #15318]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T16:25:23.621577 #15318]  INFO -- : Completed 302 Found in 252ms (ActiveRecord: 0.5ms)
+I, [2014-02-04T16:25:23.826442 #15318]  INFO -- : Started GET "/" for 10.10.3.4 at 2014-02-04 16:25:23 +0400
+I, [2014-02-04T16:25:23.827726 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T16:25:23.869623 #15318]  INFO -- :   Rendered charts/_game_online.html.haml (4.6ms)
+I, [2014-02-04T16:25:23.870170 #15318]  INFO -- :   Rendered main/index.html.haml within layouts/application (16.5ms)
+I, [2014-02-04T16:25:23.871652 #15318]  INFO -- : Completed 200 OK in 44ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+I, [2014-02-04T16:25:25.878184 #15318]  INFO -- : Started GET "/on_date" for 10.10.3.4 at 2014-02-04 16:25:25 +0400
+I, [2014-02-04T16:25:25.879299 #15318]  INFO -- : Processing by ChartsController#on_date as HTML
+I, [2014-02-04T16:25:25.918751 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (6.9ms)
+I, [2014-02-04T16:25:25.919197 #15318]  INFO -- :   Rendered charts/on_date.haml within layouts/application (7.6ms)
+I, [2014-02-04T16:25:25.921006 #15318]  INFO -- : Completed 200 OK in 42ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T17:02:35.531424 #15318]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 17:02:35 +0400
+I, [2014-02-04T17:02:35.536328 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T17:02:35.563479 #15318]  INFO -- :   Rendered charts/_game_online.html.haml (3.4ms)
+I, [2014-02-04T17:02:35.564106 #15318]  INFO -- :   Rendered main/index.html.haml within layouts/application (4.4ms)
+I, [2014-02-04T17:02:35.566365 #15318]  INFO -- : Completed 200 OK in 29ms (Views: 7.3ms | ActiveRecord: 1.0ms)
+I, [2014-02-04T17:02:36.170797 #15318]  INFO -- : Started GET "/on_date" for 10.10.3.143 at 2014-02-04 17:02:36 +0400
+I, [2014-02-04T17:02:36.174220 #15318]  INFO -- : Processing by ChartsController#on_date as HTML
+I, [2014-02-04T17:02:36.211085 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (10.8ms)
+I, [2014-02-04T17:02:36.211634 #15318]  INFO -- :   Rendered charts/on_date.haml within layouts/application (11.8ms)
+I, [2014-02-04T17:02:36.213716 #15318]  INFO -- : Completed 200 OK in 39ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T17:02:37.417946 #15318]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 17:02:37 +0400
+I, [2014-02-04T17:02:37.425174 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T17:02:37.449523 #15318]  INFO -- :   Rendered charts/_game_online.html.haml (3.1ms)
+I, [2014-02-04T17:02:37.450209 #15318]  INFO -- :   Rendered main/index.html.haml within layouts/application (4.0ms)
+I, [2014-02-04T17:02:37.452102 #15318]  INFO -- : Completed 200 OK in 26ms (Views: 6.6ms | ActiveRecord: 1.1ms)
+I, [2014-02-04T17:27:01.133035 #15318]  INFO -- : Started GET "/" for 10.10.3.18 at 2014-02-04 17:27:01 +0400
+I, [2014-02-04T17:27:01.135452 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T17:27:01.137883 #15318]  INFO -- : Redirected to http://10.10.3.148:3000/login
+I, [2014-02-04T17:27:01.138266 #15318]  INFO -- : Filter chain halted as :authorize rendered or redirected
+I, [2014-02-04T17:27:01.138567 #15318]  INFO -- : Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+I, [2014-02-04T17:27:01.156776 #15318]  INFO -- : Started GET "/login" for 10.10.3.18 at 2014-02-04 17:27:01 +0400
+I, [2014-02-04T17:27:01.159934 #15318]  INFO -- : Processing by SessionsController#new as HTML
+I, [2014-02-04T17:27:01.162566 #15318]  INFO -- :   Rendered sessions/new.html.haml within layouts/application (1.5ms)
+I, [2014-02-04T17:27:01.164851 #15318]  INFO -- : Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+I, [2014-02-04T17:27:01.255224 #15318]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.18 at 2014-02-04 17:27:01 +0400
+I, [2014-02-04T17:27:01.262544 #15318]  INFO -- : Started GET "/assets/application-41289874eff3b95a5e07d88ed94836c1.css" for 10.10.3.18 at 2014-02-04 17:27:01 +0400
+I, [2014-02-04T17:27:01.276944 #15318]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.18 at 2014-02-04 17:27:01 +0400
+I, [2014-02-04T17:27:02.160181 #15318]  INFO -- : Started GET "/assets/favicon-becc004ac5ebde46c3b93e9baa51b50a.ico" for 10.10.3.18 at 2014-02-04 17:27:02 +0400
+I, [2014-02-04T17:27:04.184889 #15318]  INFO -- : Started POST "/login" for 10.10.3.18 at 2014-02-04 17:27:04 +0400
+I, [2014-02-04T17:27:04.186232 #15318]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T17:27:04.186321 #15318]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"3bfs5vAphQyD5KidKRLRI6aOCZfgp8rVlPHRzIHyJQw=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T17:27:04.260841 #15318]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T17:27:04.261343 #15318]  INFO -- : Completed 302 Found in 75ms (ActiveRecord: 0.3ms)
+I, [2014-02-04T17:27:04.268115 #15318]  INFO -- : Started GET "/" for 10.10.3.18 at 2014-02-04 17:27:04 +0400
+I, [2014-02-04T17:27:04.268893 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T17:27:04.286741 #15318]  INFO -- :   Rendered charts/_game_online.html.haml (2.6ms)
+I, [2014-02-04T17:27:04.287206 #15318]  INFO -- :   Rendered main/index.html.haml within layouts/application (3.4ms)
+I, [2014-02-04T17:27:04.288535 #15318]  INFO -- : Completed 200 OK in 19ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+I, [2014-02-04T17:27:04.369148 #15318]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.18 at 2014-02-04 17:27:04 +0400
+I, [2014-02-04T17:27:08.314489 #15318]  INFO -- : Started GET "/on_date" for 10.10.3.18 at 2014-02-04 17:27:08 +0400
+I, [2014-02-04T17:27:08.315645 #15318]  INFO -- : Processing by ChartsController#on_date as HTML
+I, [2014-02-04T17:27:08.334323 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (3.5ms)
+I, [2014-02-04T17:27:08.334757 #15318]  INFO -- :   Rendered charts/on_date.haml within layouts/application (4.2ms)
+I, [2014-02-04T17:27:08.335924 #15318]  INFO -- : Completed 200 OK in 20ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+I, [2014-02-04T17:27:12.707158 #15318]  INFO -- : Started POST "/game_online_select" for 10.10.3.18 at 2014-02-04 17:27:12 +0400
+I, [2014-02-04T17:27:12.711044 #15318]  INFO -- : Processing by ChartsController#game_online_select as JS
+I, [2014-02-04T17:27:12.711308 #15318]  INFO -- :   Parameters: {"utf8"=>"✓", "date"=>{"year"=>"2014", "month"=>"2", "day"=>"3"}, "commit"=>"Get period"}
+I, [2014-02-04T17:27:13.108709 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (14.6ms)
+I, [2014-02-04T17:27:13.110285 #15318]  INFO -- :   Rendered charts/game_online_select.js.erb (16.4ms)
+I, [2014-02-04T17:27:13.110743 #15318]  INFO -- : Completed 200 OK in 399ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+I, [2014-02-04T17:27:28.432573 #15318]  INFO -- : Started POST "/game_online_select" for 10.10.3.18 at 2014-02-04 17:27:28 +0400
+I, [2014-02-04T17:27:28.433499 #15318]  INFO -- : Processing by ChartsController#game_online_select as JS
+I, [2014-02-04T17:27:28.433579 #15318]  INFO -- :   Parameters: {"utf8"=>"✓", "date"=>{"year"=>"2014", "month"=>"2", "day"=>"2"}, "commit"=>"Get period"}
+I, [2014-02-04T17:27:28.474001 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (16.7ms)
+I, [2014-02-04T17:27:28.475654 #15318]  INFO -- :   Rendered charts/game_online_select.js.erb (18.5ms)
+I, [2014-02-04T17:27:28.476239 #15318]  INFO -- : Completed 200 OK in 43ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+I, [2014-02-04T17:28:34.885891 #15318]  INFO -- : Started GET "/users" for 10.10.3.18 at 2014-02-04 17:28:34 +0400
+I, [2014-02-04T17:28:34.889012 #15318]  INFO -- : Processing by UsersController#index as HTML
+I, [2014-02-04T17:28:34.935336 #15318]  INFO -- :   Rendered users/index.html.haml within layouts/application (4.9ms)
+I, [2014-02-04T17:28:34.936842 #15318]  INFO -- : Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.6ms)
+I, [2014-02-04T17:28:37.581750 #15318]  INFO -- : Started GET "/" for 10.10.3.18 at 2014-02-04 17:28:37 +0400
+I, [2014-02-04T17:28:37.583674 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T17:28:37.620990 #15318]  INFO -- :   Rendered charts/_game_online.html.haml (3.6ms)
+I, [2014-02-04T17:28:37.621186 #15318]  INFO -- :   Rendered main/index.html.haml within layouts/application (4.0ms)
+I, [2014-02-04T17:28:37.622405 #15318]  INFO -- : Completed 200 OK in 39ms (Views: 5.9ms | ActiveRecord: 2.0ms)
+I, [2014-02-04T17:28:39.638049 #15318]  INFO -- : Started GET "/on_date" for 10.10.3.18 at 2014-02-04 17:28:39 +0400
+I, [2014-02-04T17:28:39.640044 #15318]  INFO -- : Processing by ChartsController#on_date as HTML
+I, [2014-02-04T17:28:39.699680 #15318]  INFO -- :   Rendered charts/_game_online_select.html.haml (6.2ms)
+I, [2014-02-04T17:28:39.700130 #15318]  INFO -- :   Rendered charts/on_date.haml within layouts/application (11.9ms)
+I, [2014-02-04T17:28:39.701924 #15318]  INFO -- : Completed 200 OK in 62ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T19:59:37.429981 #15318]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 19:59:37 +0400
+I, [2014-02-04T19:59:37.432224 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T19:59:37.454008 #15318]  INFO -- :   Rendered charts/_game_online.html.haml (2.7ms)
+I, [2014-02-04T19:59:37.454661 #15318]  INFO -- :   Rendered main/index.html.haml within layouts/application (3.6ms)
+I, [2014-02-04T19:59:37.456367 #15318]  INFO -- : Completed 200 OK in 23ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T19:59:37.537022 #15318]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.143 at 2014-02-04 19:59:37 +0400
+I, [2014-02-04T19:59:37.540902 #15318]  INFO -- : Started GET "/assets/application-41289874eff3b95a5e07d88ed94836c1.css" for 10.10.3.143 at 2014-02-04 19:59:37 +0400
+I, [2014-02-04T19:59:37.571847 #15318]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.143 at 2014-02-04 19:59:37 +0400
+I, [2014-02-04T19:59:39.343480 #15318]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 19:59:39 +0400
+I, [2014-02-04T19:59:39.344414 #15318]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T19:59:39.363776 #15318]  INFO -- :   Rendered charts/_game_online.html.haml (1.8ms)
+I, [2014-02-04T19:59:39.364419 #15318]  INFO -- :   Rendered main/index.html.haml within layouts/application (2.4ms)
+I, [2014-02-04T19:59:39.366079 #15318]  INFO -- : Completed 200 OK in 22ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T19:59:39.440318 #15318]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.143 at 2014-02-04 19:59:39 +0400
+I, [2014-02-04T19:59:39.445426 #15318]  INFO -- : Started GET "/assets/application-41289874eff3b95a5e07d88ed94836c1.css" for 10.10.3.143 at 2014-02-04 19:59:39 +0400
+I, [2014-02-04T19:59:39.480014 #15318]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.143 at 2014-02-04 19:59:39 +0400
+I, [2014-02-04T20:10:19.710602 #20499]  INFO -- : Started GET "/on_date" for 10.10.3.143 at 2014-02-04 20:10:19 +0400
+I, [2014-02-04T20:10:19.721698 #20499]  INFO -- : Processing by ChartsController#on_date as HTML
+I, [2014-02-04T20:10:19.744603 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/login
+I, [2014-02-04T20:10:19.745229 #20499]  INFO -- : Filter chain halted as :authorize rendered or redirected
+I, [2014-02-04T20:10:19.745875 #20499]  INFO -- : Completed 302 Found in 23ms (ActiveRecord: 2.6ms)
+I, [2014-02-04T20:10:19.752116 #20499]  INFO -- : Started GET "/login" for 10.10.3.143 at 2014-02-04 20:10:19 +0400
+I, [2014-02-04T20:10:19.754012 #20499]  INFO -- : Processing by SessionsController#new as HTML
+I, [2014-02-04T20:10:19.768940 #20499]  INFO -- :   Rendered sessions/new.html.haml within layouts/application (10.8ms)
+I, [2014-02-04T20:10:19.775408 #20499]  INFO -- : Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+I, [2014-02-04T20:10:19.787387 #20499]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.143 at 2014-02-04 20:10:19 +0400
+I, [2014-02-04T20:10:19.907842 #20499]  INFO -- : Started GET "/assets/application-41289874eff3b95a5e07d88ed94836c1.css" for 10.10.3.143 at 2014-02-04 20:10:19 +0400
+I, [2014-02-04T20:10:19.997925 #20499]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.143 at 2014-02-04 20:10:19 +0400
+I, [2014-02-04T20:10:26.367440 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:10:26 +0400
+I, [2014-02-04T20:10:26.374036 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:10:26.375134 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:10:26.459402 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:10:26.460214 #20499]  INFO -- : Completed 302 Found in 84ms (ActiveRecord: 1.5ms)
+I, [2014-02-04T20:10:26.465717 #20499]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:10:26 +0400
+I, [2014-02-04T20:10:26.467422 #20499]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T20:12:33.733535 #20499]  INFO -- :   Rendered charts/_game_online.html.haml (1.2ms)
+I, [2014-02-04T20:12:33.735326 #20499]  INFO -- :   Rendered main/index.html.haml within layouts/application (5.2ms)
+I, [2014-02-04T20:12:33.737473 #20499]  INFO -- : Completed 200 OK in 127270ms (Views: 9.6ms | ActiveRecord: 28.3ms)
+I, [2014-02-04T20:12:33.739327 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:12:33 +0400
+I, [2014-02-04T20:12:33.740631 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:12:33.741050 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:12:33.816070 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:12:33.819193 #20499]  INFO -- : Completed 302 Found in 78ms (ActiveRecord: 0.3ms)
+I, [2014-02-04T20:12:33.821234 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:12:33 +0400
+I, [2014-02-04T20:12:33.822445 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:12:33.822887 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:12:33.901698 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:12:33.902492 #20499]  INFO -- : Completed 302 Found in 79ms (ActiveRecord: 0.2ms)
+I, [2014-02-04T20:12:33.904484 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:12:33 +0400
+I, [2014-02-04T20:12:33.905878 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:12:33.906466 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:12:33.982562 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:12:33.983428 #20499]  INFO -- : Completed 302 Found in 76ms (ActiveRecord: 0.3ms)
+I, [2014-02-04T20:12:33.985178 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:12:33 +0400
+I, [2014-02-04T20:12:33.986167 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:12:33.986584 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:12:34.062918 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:12:34.063741 #20499]  INFO -- : Completed 302 Found in 77ms (ActiveRecord: 0.3ms)
+I, [2014-02-04T20:12:34.065895 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:12:34 +0400
+I, [2014-02-04T20:12:34.067286 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:12:34.067762 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:12:34.142789 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:12:34.143427 #20499]  INFO -- : Completed 302 Found in 75ms (ActiveRecord: 0.2ms)
+I, [2014-02-04T20:12:34.145868 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:12:34 +0400
+I, [2014-02-04T20:12:34.147251 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:12:34.147754 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:12:34.223705 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:12:34.225432 #20499]  INFO -- : Completed 302 Found in 77ms (ActiveRecord: 0.2ms)
+I, [2014-02-04T20:12:34.227502 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:12:34 +0400
+I, [2014-02-04T20:12:34.228647 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:12:34.229147 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:12:34.303046 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:12:34.303808 #20499]  INFO -- : Completed 302 Found in 74ms (ActiveRecord: 0.2ms)
+I, [2014-02-04T20:12:34.305647 #20499]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:12:34 +0400
+I, [2014-02-04T20:12:34.306785 #20499]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:12:34.307291 #20499]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuAsXMLOwgi+4RfznLUW7Zyswk6u6z4HyjRxP6kp2JI=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:12:34.387139 #20499]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:12:34.388310 #20499]  INFO -- : Completed 302 Found in 80ms (ActiveRecord: 0.2ms)
+I, [2014-02-04T20:12:34.396812 #20499]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:12:34 +0400
+I, [2014-02-04T20:12:34.398175 #20499]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T20:13:18.601503 #20499]  INFO -- : Completed   in 44203ms
+I, [2014-02-04T20:14:03.736555 #20919]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:14:03 +0400
+I, [2014-02-04T20:14:03.745507 #20919]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T20:16:11.078118 #20919]  INFO -- :   Rendered charts/_game_online.html.haml (1.1ms)
+I, [2014-02-04T20:16:11.080117 #20919]  INFO -- :   Rendered main/index.html.haml within layouts/application (5.9ms)
+I, [2014-02-04T20:16:11.088749 #20919]  INFO -- : Completed 200 OK in 127343ms (Views: 17.6ms | ActiveRecord: 1.9ms)
+I, [2014-02-04T20:16:11.090448 #20919]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:16:11 +0400
+I, [2014-02-04T20:16:11.091686 #20919]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T20:18:18.309004 #20919]  INFO -- :   Rendered charts/_game_online.html.haml (0.3ms)
+I, [2014-02-04T20:18:18.311010 #20919]  INFO -- :   Rendered main/index.html.haml within layouts/application (2.7ms)
+I, [2014-02-04T20:18:18.313685 #20919]  INFO -- : Completed 200 OK in 127221ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T20:18:18.316465 #20919]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:18:18 +0400
+I, [2014-02-04T20:18:18.317800 #20919]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T20:20:25.536884 #20919]  INFO -- :   Rendered charts/_game_online.html.haml (0.1ms)
+I, [2014-02-04T20:20:25.538962 #20919]  INFO -- :   Rendered main/index.html.haml within layouts/application (2.8ms)
+I, [2014-02-04T20:20:25.541407 #20919]  INFO -- : Completed 200 OK in 127223ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+I, [2014-02-04T20:20:25.543203 #20919]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:20:25 +0400
+I, [2014-02-04T20:20:25.544416 #20919]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T20:20:57.268272 #20919]  INFO -- : Completed   in 31723ms
+I, [2014-02-04T20:22:51.045705 #21226]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:22:51 +0400
+I, [2014-02-04T20:22:51.060588 #21226]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T20:22:51.082794 #21226]  INFO -- : Redirected to http://10.10.3.148:3000/login
+I, [2014-02-04T20:22:51.083477 #21226]  INFO -- : Filter chain halted as :authorize rendered or redirected
+I, [2014-02-04T20:22:51.084194 #21226]  INFO -- : Completed 302 Found in 22ms (ActiveRecord: 2.8ms)
+I, [2014-02-04T20:22:51.092009 #21226]  INFO -- : Started GET "/login" for 10.10.3.143 at 2014-02-04 20:22:51 +0400
+I, [2014-02-04T20:22:51.094258 #21226]  INFO -- : Processing by SessionsController#new as HTML
+I, [2014-02-04T20:22:51.115145 #21226]  INFO -- :   Rendered sessions/new.html.haml within layouts/application (16.4ms)
+I, [2014-02-04T20:22:51.121803 #21226]  INFO -- : Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+I, [2014-02-04T20:22:51.134869 #21226]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.143 at 2014-02-04 20:22:51 +0400
+I, [2014-02-04T20:22:51.180564 #21226]  INFO -- : Started GET "/assets/application-41289874eff3b95a5e07d88ed94836c1.css" for 10.10.3.143 at 2014-02-04 20:22:51 +0400
+I, [2014-02-04T20:22:51.245522 #21226]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.143 at 2014-02-04 20:22:51 +0400
+I, [2014-02-04T20:23:00.286157 #21226]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-04 20:23:00 +0400
+I, [2014-02-04T20:23:00.289371 #21226]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-04T20:23:00.290671 #21226]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"1JCOyqR5+dbmukVgj+o1j+kaFu38u1M/A7K6tOnw5yY=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-04T20:23:00.380104 #21226]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-04T20:23:00.380885 #21226]  INFO -- : Completed 302 Found in 89ms (ActiveRecord: 1.7ms)
+I, [2014-02-04T20:23:00.386370 #21226]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:23:00 +0400
+I, [2014-02-04T20:23:00.387688 #21226]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-04T20:24:06.431671 #21226]  INFO -- : Completed   in 66042ms

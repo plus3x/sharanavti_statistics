@@ -3,18 +3,6 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/users
 END
-index.html.haml
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/users/index.html.haml
-END
-show.html.erb
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/users/show.html.erb
-END
 index.json.jbuilder
 K 25
 svn:wc:ra_dav:version-url
@@ -44,4 +32,16 @@ K 25
 svn:wc:ra_dav:version-url
 V 75
 /svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/users/edit.html.haml
+END
+index.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/users/index.html.haml
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Shararam3D-Site/!svn/ver/258/statistics/app/views/users/show.html.erb
 END

@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 56
 /svn/Shararam3D-Site/!svn/ver/258/statistics/app/helpers
 END
-application_helper.rb
-K 25
-svn:wc:ra_dav:version-url
-V 78
-/svn/Shararam3D-Site/!svn/ver/258/statistics/app/helpers/application_helper.rb
-END
 main_helper.rb
 K 25
 svn:wc:ra_dav:version-url
@@ -26,4 +20,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 72
 /svn/Shararam3D-Site/!svn/ver/258/statistics/app/helpers/users_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Shararam3D-Site/!svn/ver/258/statistics/app/helpers/application_helper.rb
 END
