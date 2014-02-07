@@ -5453,3 +5453,1007 @@ Binary data inserted for `string` type on column `password_digest`
 Redirected to http://test.host/users/121898072
 Completed 302 Found in 14ms (ActiveRecord: 2.6ms)
   [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[36m (30.7ms)[0m  [1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (26.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (14.8ms)[0m  [1mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  [1m[35m (16.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (20.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (18.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120134037')[0m
+  [1m[35m (16.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140120115644')
+  [1m[36m (18.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120114246')[0m
+  [1m[35m (18.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140120115732')
+  [1m[36m (15.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120133118')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.3ms)[0m  [1mDELETE FROM "roles"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "roles" ("title", "created_at", "updated_at", "id") VALUES ('admin', '2014-02-07 15:23:54', '2014-02-07 15:23:54', 135138680)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "roles" ("title", "created_at", "updated_at", "id") VALUES ('client', '2014-02-07 15:23:54', '2014-02-07 15:23:54', 121898072)[0m
+  [1m[35m (1.1ms)[0m  DELETE FROM "users"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id", "role_id") VALUES ('client@client.com', '$2a$10$1/qvfwYFrrcFTAIM2tXzLOi5FgZapZbQYEm98A6GY.7cBTtFymh9y', '2014-02-07 15:23:54', '2014-02-07 15:23:54', 121898072, 121898072)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id", "role_id") VALUES ('admin@admin.com', '$2a$10$EBJeEUuQF3rnh.kWEIslr.myysvJmoJ./aVStIGh13vUWhJkojUte', '2014-02-07 15:23:54', '2014-02-07 15:23:54', 135138680, 135138680)
+  [1m[36m (16.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------
+RoleTest: test_Role_admin_have_permission_to_create_new_user
+------------------------------------------------------------
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------
+UserTest: test_should_have_role
+-------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_user_can
+------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+UserTest: test_user_email_must_be_certain_format
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------
+ChartsControllerTest: test_should_get_game_online_select_via_ajax
+-----------------------------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by ChartsController#game_online_select as JS
+  Parameters: {"date"=>{"year"=>"2014", "month"=>"2", "day"=>"7"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+  Rendered charts/_game_online_select.html.haml (5.3ms)
+  Rendered charts/game_online_select.js.erb (18.1ms)
+Completed 200 OK in 148ms (Views: 81.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+ChartsControllerTest: test_should_get_on_date
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by ChartsController#on_date as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  Rendered charts/_game_online_select.html.haml (4.5ms)
+Completed 200 OK in 1682ms (Views: 1677.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+ChartsControllerTest: test_should_post_new_dot_via_ajax
+-------------------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------
+ChartsControllerTest: test_should_route_to_on_date
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+MainControllerTest: test_should_get_index
+-----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"client@client.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'client@client.com' LIMIT 1
+Redirected to http://test.host/login
+Completed 302 Found in 81ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+SessionsControllerTest: test_should_login
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"client@client.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'client@client.com' LIMIT 1
+Redirected to http://test.host/
+Completed 302 Found in 81ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+SessionsControllerTest: test_should_logout
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+Redirected to http://test.host/login
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[35mUser Load (3.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"client@client.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-02-07 15:23:56.737041"], ["email", "client@client.com"], ["password_digest", "$2a$04$pxtPfnJyFM4GV7HRZ67gv.96n9GM1xQLkhtk5mXnlrm3t3oXfaSx."], ["updated_at", "2014-02-07 15:23:56.737041"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/135138681
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (75.5ms)
+Completed 200 OK in 98ms (Views: 95.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (3.2ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"client@client.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"121898072"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = 121898072[0m  [["password_digest", "$2a$04$9/6noyg1rJCIXVtz8aqGAe3Dfwkzo9I.j/W0rJFiU4rVjo0BZleJ6"], ["updated_at", "2014-02-07 15:23:56.950480"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/121898072
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (32.7ms)[0m  [1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (16.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (19.6ms)[0m  [1mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  [1m[35m (20.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (14.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (22.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120134037')[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140120115644')
+  [1m[36m (16.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120114246')[0m
+  [1m[35m (16.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140120115732')
+  [1m[36m (28.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120133118')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM "roles"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "roles" ("title", "created_at", "updated_at", "id") VALUES ('admin', '2014-02-07 15:24:46', '2014-02-07 15:24:46', 135138680)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "roles" ("title", "created_at", "updated_at", "id") VALUES ('client', '2014-02-07 15:24:46', '2014-02-07 15:24:46', 121898072)[0m
+  [1m[35m (1.2ms)[0m  DELETE FROM "users"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id", "role_id") VALUES ('client@client.com', '$2a$10$uhqE4tz4IT6jcSmhuKahReagrFu4n9cZOQZEsHYjK6AmdfvxE0vX6', '2014-02-07 15:24:46', '2014-02-07 15:24:46', 121898072, 121898072)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id", "role_id") VALUES ('admin@admin.com', '$2a$10$3.hvjbCzb69In2D6nnI1GeS83Fg6APCf.6sIDei/iN4eAe82PtcQK', '2014-02-07 15:24:46', '2014-02-07 15:24:46', 135138680, 135138680)
+  [1m[36m (41.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------
+RoleTest: test_Role_admin_have_permission_to_create_new_user
+------------------------------------------------------------
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------
+UserTest: test_should_have_role
+-------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36mRole Load (0.6ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_user_can
+------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+UserTest: test_user_email_must_be_certain_format
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------
+ChartsControllerTest: test_should_get_game_online_select_via_ajax
+-----------------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by ChartsController#game_online_select as JS
+  Parameters: {"date"=>{"year"=>"2014", "month"=>"2", "day"=>"7"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+  Rendered charts/_game_online_select.html.haml (21.7ms)
+  Rendered charts/game_online_select.js.erb (30.4ms)
+Completed 200 OK in 197ms (Views: 47.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+ChartsControllerTest: test_should_get_on_date
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by ChartsController#on_date as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  Rendered charts/_game_online_select.html.haml (19.0ms)
+Completed 200 OK in 117ms (Views: 94.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+ChartsControllerTest: test_should_post_new_dot_via_ajax
+-------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------
+ChartsControllerTest: test_should_route_to_on_date
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+MainControllerTest: test_should_get_index
+-----------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Completed 200 OK in 61ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"client@client.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'client@client.com' LIMIT 1
+Redirected to http://test.host/login
+Completed 302 Found in 85ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+SessionsControllerTest: test_should_login
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"client@client.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'client@client.com' LIMIT 1
+Redirected to http://test.host/
+Completed 302 Found in 82ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+SessionsControllerTest: test_should_logout
+------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+Redirected to http://test.host/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+  [1m[35m (3.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"client@client.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-02-07 15:24:46.751430"], ["email", "client@client.com"], ["password_digest", "$2a$04$c3DQAaVtAb.wu.XDbyw1JenS0Mg36ch/gL6MnmpmIQhNbH9CqvZNK"], ["updated_at", "2014-02-07 15:24:46.751430"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/135138681
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (17.3ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (8.1ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"client@client.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"121898072"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (1.3ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = 121898072[0m  [["password_digest", "$2a$04$ZekcsoKEdrtCXC7lrVKLFuTHtsKhqz6Oa6xcUe1n4LwIi/wzurMVS"], ["updated_at", "2014-02-07 15:24:46.882800"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/121898072
+Completed 302 Found in 12ms (ActiveRecord: 1.9ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (26.3ms)[0m  [1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (17.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (17.8ms)[0m  [1mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  [1m[35m (17.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (18.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (18.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120134037')[0m
+  [1m[35m (15.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140120115644')
+  [1m[36m (20.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120114246')[0m
+  [1m[35m (18.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140120115732')
+  [1m[36m (16.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120133118')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.3ms)[0m  [1mDELETE FROM "roles"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "roles" ("title", "created_at", "updated_at", "id") VALUES ('admin', '2014-02-07 15:24:56', '2014-02-07 15:24:56', 135138680)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "roles" ("title", "created_at", "updated_at", "id") VALUES ('client', '2014-02-07 15:24:56', '2014-02-07 15:24:56', 121898072)[0m
+  [1m[35m (1.3ms)[0m  DELETE FROM "users"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id", "role_id") VALUES ('client@client.com', '$2a$10$s5noEWHchLvmp/mlArayyud.o67yPVCEQNS0LgBNJIfDoftVXJjqu', '2014-02-07 15:24:56', '2014-02-07 15:24:56', 121898072, 121898072)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id", "role_id") VALUES ('admin@admin.com', '$2a$10$Vv2lp9DA22OfzAqdgJcUIeZJJq8jNSdCpykMQporQAGEqNSdeRKcG', '2014-02-07 15:24:56', '2014-02-07 15:24:56', 135138680, 135138680)
+  [1m[36m (19.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------
+RoleTest: test_Role_admin_have_permission_to_create_new_user
+------------------------------------------------------------
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------
+UserTest: test_should_have_role
+-------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (1.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_user_can
+------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+UserTest: test_user_email_must_be_certain_format
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------
+ChartsControllerTest: test_should_get_game_online_select_via_ajax
+-----------------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by ChartsController#game_online_select as JS
+  Parameters: {"date"=>{"year"=>"2014", "month"=>"2", "day"=>"7"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+  Rendered charts/_game_online_select.html.haml (25.5ms)
+  Rendered charts/game_online_select.js.erb (44.6ms)
+Completed 200 OK in 111ms (Views: 74.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+ChartsControllerTest: test_should_get_on_date
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by ChartsController#on_date as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  Rendered charts/_game_online_select.html.haml (35.7ms)
+Completed 200 OK in 126ms (Views: 85.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+ChartsControllerTest: test_should_post_new_dot_via_ajax
+-------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------
+ChartsControllerTest: test_should_route_to_on_date
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+MainControllerTest: test_should_get_index
+-----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Completed 200 OK in 36ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"client@client.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'client@client.com' LIMIT 1
+Redirected to http://test.host/login
+Completed 302 Found in 82ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------
+SessionsControllerTest: test_should_login
+-----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"client@client.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'client@client.com' LIMIT 1
+Redirected to http://test.host/
+Completed 302 Found in 78ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+SessionsControllerTest: test_should_logout
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+Redirected to http://test.host/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"client@client.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-02-07 15:24:56.674126"], ["email", "client@client.com"], ["password_digest", "$2a$04$slXxNsx42iZaimdOizeMxek97waXURe9V0gJWVHz8hBPjOtyJPDuS"], ["updated_at", "2014-02-07 15:24:56.674126"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/135138681
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (18.9ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (4.6ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"client@client.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"121898072"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = 121898072[0m  [["password_digest", "$2a$04$UbcvVHjTQ83ZeX.aNxg9vOI9qOQgwaX49gjdzO37k82IBdhzhotn."], ["updated_at", "2014-02-07 15:24:56.811326"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/121898072
+Completed 302 Found in 15ms (ActiveRecord: 1.5ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (54.4ms)[0m  [1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (20.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (19.2ms)[0m  [1mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  [1m[35m (22.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (17.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (21.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120134037')[0m
+  [1m[35m (18.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140120115644')
+  [1m[36m (21.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120114246')[0m
+  [1m[35m (17.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140120115732')
+  [1m[36m (14.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140120133118')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (2.1ms)[0m  [1mDELETE FROM "roles"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "roles" ("title", "created_at", "updated_at", "id") VALUES ('admin', '2014-02-07 15:30:27', '2014-02-07 15:30:27', 135138680)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "roles" ("title", "created_at", "updated_at", "id") VALUES ('client', '2014-02-07 15:30:27', '2014-02-07 15:30:27', 121898072)[0m
+  [1m[35m (2.2ms)[0m  DELETE FROM "users"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id", "role_id") VALUES ('client@client.com', '$2a$10$7m7nCdLZnNnjaad7ClkupO8q798me6GzZz0TKbAYfh5f0Fk7rFDmy', '2014-02-07 15:30:27', '2014-02-07 15:30:27', 121898072, 121898072)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id", "role_id") VALUES ('admin@admin.com', '$2a$10$xdpu6xNs8qhu7cB8QMijNOI5/GHQXQd5zlLhNdI.NquGejgAzcGAq', '2014-02-07 15:30:27', '2014-02-07 15:30:27', 135138680, 135138680)
+  [1m[36m (23.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------
+RoleTest: test_Role_admin_have_permission_to_create_new_user
+------------------------------------------------------------
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------
+UserTest: test_should_have_role
+-------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_user_can
+------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+UserTest: test_user_email_must_be_certain_format
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------
+ChartsControllerTest: test_should_get_game_online_select_via_ajax
+-----------------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by ChartsController#game_online_select as JS
+  Parameters: {"date"=>{"year"=>"2014", "month"=>"2", "day"=>"7"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+  Rendered charts/_game_online_select.html.haml (25.6ms)
+  Rendered charts/game_online_select.js.erb (39.3ms)
+Completed 200 OK in 116ms (Views: 75.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------
+ChartsControllerTest: test_should_get_on_date
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by ChartsController#on_date as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+  Rendered charts/_game_online_select.html.haml (34.2ms)
+Completed 200 OK in 117ms (Views: 83.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+ChartsControllerTest: test_should_post_new_dot_via_ajax
+-------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by ChartsController#new_dot as JS
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------
+ChartsControllerTest: test_should_route_to_on_date
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+MainControllerTest: test_should_get_index
+-----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Completed 200 OK in 44ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"client@client.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'client@client.com' LIMIT 1
+Redirected to http://test.host/login
+Completed 302 Found in 76ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (3.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 3.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------
+SessionsControllerTest: test_should_login
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"client@client.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'client@client.com' LIMIT 1
+Redirected to http://test.host/
+Completed 302 Found in 79ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+SessionsControllerTest: test_should_logout
+------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 121898072 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 121898072]]
+Redirected to http://test.host/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"client@client.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-02-07 15:30:28.029514"], ["email", "client@client.com"], ["password_digest", "$2a$04$QuVyPeIAkA1HdQnZ2xBCH.KvK.1eMJ6Se4JrkPO/omdIVcCDz8We."], ["updated_at", "2014-02-07 15:30:28.029514"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/135138681
+Completed 302 Found in 13ms (ActiveRecord: 5.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 7ms (ActiveRecord: 3.8ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (15.8ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles"
+  Rendered users/_form.html.haml (6.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 135138680]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"121898072"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 135138680]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 121898072]]
+Completed 200 OK in 13ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 135138680]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"client@client.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"121898072"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 135138680 LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 135138680]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 121898072]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT  "roles".* FROM "roles"  WHERE "roles"."id" = ?  ORDER BY "roles"."id" ASC LIMIT 1  [["id", 121898072]]
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = 121898072[0m  [["password_digest", "$2a$04$Vk.k/CjMS9Z0BDmSlBIJwuqmDWyU63ogZBhyui2PGogoeRD3.c9B2"], ["updated_at", "2014-02-07 15:30:28.182394"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/121898072
+Completed 302 Found in 14ms (ActiveRecord: 2.5ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
