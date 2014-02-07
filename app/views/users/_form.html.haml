@@ -20,9 +20,9 @@
     = f.label :password_confirmation
     %br
     = f.password_field :password_confirmation
-  - if (current_user.admin? rescue nil)
-    .field
-      = f.label :role
-      = f.collection_select :role_id, Role.all, :id, :title
+  .field
+    = f.label :role
+    %br
+    = f.collection_select :role_id, Role.all, :id, :title
   .actions
     = f.submit

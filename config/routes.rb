@@ -10,14 +10,10 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  controller :statistics do
-    post 'new_dot'
-    get  'game_online'
-  end
-
   controller :charts do
     post 'game_online_select'
     get  'on_date'
+    post 'new_dot'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

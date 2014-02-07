@@ -257,3 +257,382 @@ I, [2014-02-04T20:23:00.380885 #21226]  INFO -- : Completed 302 Found in 89ms (A
 I, [2014-02-04T20:23:00.386370 #21226]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-04 20:23:00 +0400
 I, [2014-02-04T20:23:00.387688 #21226]  INFO -- : Processing by MainController#index as HTML
 I, [2014-02-04T20:24:06.431671 #21226]  INFO -- : Completed   in 66042ms
+I, [2014-02-06T19:44:43.201741 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:44:43 +0400
+I, [2014-02-06T19:44:43.216190 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:44:43.234759 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:44:43.235256 #23193]  INFO -- : Completed 500 Internal Server Error in 18ms
+F, [2014-02-06T19:44:43.236918 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:44:46.811491 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:44:46 +0400
+I, [2014-02-06T19:44:46.815462 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:44:46.817637 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:44:46.818360 #23193]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2014-02-06T19:44:46.820242 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:44:48.923161 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:44:48 +0400
+I, [2014-02-06T19:44:48.923821 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:44:48.925206 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:44:48.925436 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:44:48.927260 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:44:52.754951 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:44:52 +0400
+I, [2014-02-06T19:44:52.756009 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:44:52.758640 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:44:52.759032 #23193]  INFO -- : Completed 500 Internal Server Error in 3ms
+F, [2014-02-06T19:44:52.760929 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:12.166623 #23193]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-02-06 19:45:12 +0400
+I, [2014-02-06T19:45:12.192803 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:12.194725 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:12.194918 #23193]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2014-02-06T19:45:12.201759 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:12.367600 #23193]  INFO -- : Started GET "/favicon.ico" for 127.0.0.1 at 2014-02-06 19:45:12 +0400
+F, [2014-02-06T19:45:12.375400 #23193] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-02-06T19:45:12.405551 #23193]  INFO -- : Started GET "/favicon.ico" for 127.0.0.1 at 2014-02-06 19:45:12 +0400
+F, [2014-02-06T19:45:12.406637 #23193] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0.beta1) lib/active_support/cache/strategy/local_cache.rb:86:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0.beta1) lib/rails/engine.rb:516:in `call'
+  railties (4.1.0.beta1) lib/rails/application.rb:142:in `call'
+  rack (1.5.2) lib/rack/deflater.rb:25:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/quick/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-02-06T19:45:39.602803 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:39 +0400
+I, [2014-02-06T19:45:39.606988 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:39.609044 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:39.609455 #23193]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2014-02-06T19:45:39.611649 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:40.751592 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:40 +0400
+I, [2014-02-06T19:45:40.753224 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:40.792722 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:40.793160 #23193]  INFO -- : Completed 500 Internal Server Error in 39ms
+F, [2014-02-06T19:45:40.794581 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:41.443660 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:41 +0400
+I, [2014-02-06T19:45:41.445439 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:41.446448 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:41.446594 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:41.447866 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:41.771401 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:41 +0400
+I, [2014-02-06T19:45:41.773314 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:41.774541 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:41.774867 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:41.777123 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:42.052052 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:42 +0400
+I, [2014-02-06T19:45:42.053341 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:42.054199 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:42.054329 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:42.055646 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:42.318347 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:42 +0400
+I, [2014-02-06T19:45:42.320075 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:42.322559 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:42.323428 #23193]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2014-02-06T19:45:42.325859 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:42.489947 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:42 +0400
+I, [2014-02-06T19:45:42.491503 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:42.492502 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:42.492824 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:42.494483 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:42.661930 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:42 +0400
+I, [2014-02-06T19:45:42.663923 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:42.665172 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:42.665525 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:42.667043 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:43.198347 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:43 +0400
+I, [2014-02-06T19:45:43.199371 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:43.200657 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:43.200984 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:43.202500 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:43.870629 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:43 +0400
+I, [2014-02-06T19:45:43.871835 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:43.873106 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:43.873434 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:43.940389 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:44.598324 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:44 +0400
+I, [2014-02-06T19:45:44.599446 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:44.600272 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:44.601713 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:44.603080 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:44.821901 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:44 +0400
+I, [2014-02-06T19:45:44.823967 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:44.827140 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:44.827853 #23193]  INFO -- : Completed 500 Internal Server Error in 4ms
+F, [2014-02-06T19:45:44.830398 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T19:45:44.966130 #23193]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 19:45:44 +0400
+I, [2014-02-06T19:45:44.967821 #23193]  INFO -- : Processing by MainController#index as HTML
+E, [2014-02-06T19:45:44.968870 #23193] ERROR -- : SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+I, [2014-02-06T19:45:44.969170 #23193]  INFO -- : Completed 500 Internal Server Error in 1ms
+F, [2014-02-06T19:45:44.971208 #23193] FATAL -- : 
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1):
+  app/helpers/application_helper.rb:3:in `current_user'
+  app/controllers/application_controller.rb:12:in `authorize'
+
+
+I, [2014-02-06T20:24:23.329958 #23621]  INFO -- : Migrating to CreateUsers (20140120114246)
+I, [2014-02-06T20:24:23.378579 #23621]  INFO -- : Migrating to CreateRoles (20140120115644)
+I, [2014-02-06T20:24:23.416814 #23621]  INFO -- : Migrating to AddRoleToUser (20140120115732)
+I, [2014-02-06T20:24:23.492307 #23621]  INFO -- : Migrating to AddDefaultRoles (20140120133118)
+I, [2014-02-06T20:24:23.552525 #23621]  INFO -- : Migrating to AddAdminUser (20140120134037)
+E, [2014-02-06T20:24:23.747854 #23621] ERROR -- : Binary data inserted for `string` type on column `password_digest`
+I, [2014-02-06T20:24:32.305799 #23639]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 20:24:32 +0400
+I, [2014-02-06T20:24:32.317470 #23639]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-06T20:24:32.339460 #23639]  INFO -- : Redirected to http://10.10.3.148:3000/login
+I, [2014-02-06T20:24:32.340112 #23639]  INFO -- : Filter chain halted as :authorize rendered or redirected
+I, [2014-02-06T20:24:32.340851 #23639]  INFO -- : Completed 302 Found in 23ms (ActiveRecord: 2.8ms)
+I, [2014-02-06T20:24:32.348541 #23639]  INFO -- : Started GET "/login" for 10.10.3.143 at 2014-02-06 20:24:32 +0400
+I, [2014-02-06T20:24:32.350588 #23639]  INFO -- : Processing by SessionsController#new as HTML
+I, [2014-02-06T20:24:32.369880 #23639]  INFO -- :   Rendered sessions/new.html.haml within layouts/application (15.3ms)
+I, [2014-02-06T20:24:32.377972 #23639]  INFO -- : Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+I, [2014-02-06T20:24:32.630780 #23639]  INFO -- : Started GET "/assets/application-a0262a46f11f8456227fce85beed9264.css" for 10.10.3.143 at 2014-02-06 20:24:32 +0400
+I, [2014-02-06T20:24:32.642433 #23639]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.143 at 2014-02-06 20:24:32 +0400
+I, [2014-02-06T20:24:32.911278 #23639]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.143 at 2014-02-06 20:24:32 +0400
+I, [2014-02-06T20:24:38.807425 #23639]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-06 20:24:38 +0400
+I, [2014-02-06T20:24:38.810529 #23639]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-06T20:24:38.850252 #23639]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4zRJAO4FcMh6iQkF6hnJnGUmqRrj28CwVcRU8V28sk=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-06T20:24:38.935810 #23639]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-06T20:24:38.936734 #23639]  INFO -- : Completed 302 Found in 86ms (ActiveRecord: 0.8ms)
+I, [2014-02-06T20:24:38.945502 #23639]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 20:24:38 +0400
+I, [2014-02-06T20:24:38.947797 #23639]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-06T20:26:46.194236 #23639]  INFO -- :   Rendered charts/_game_online.html.haml (1.9ms)
+I, [2014-02-06T20:26:46.196898 #23639]  INFO -- :   Rendered main/index.html.haml within layouts/application (7.3ms)
+I, [2014-02-06T20:26:46.198941 #23639]  INFO -- : Completed 200 OK in 127250ms (Views: 11.8ms | ActiveRecord: 2.0ms)
+I, [2014-02-06T20:26:46.201741 #23639]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-06 20:26:46 +0400
+I, [2014-02-06T20:26:46.202975 #23639]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-06T20:26:46.203385 #23639]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4zRJAO4FcMh6iQkF6hnJnGUmqRrj28CwVcRU8V28sk=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-06T20:26:46.280926 #23639]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-06T20:26:46.283046 #23639]  INFO -- : Completed 302 Found in 79ms (ActiveRecord: 0.3ms)
+I, [2014-02-06T20:26:46.285613 #23639]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-06 20:26:46 +0400
+I, [2014-02-06T20:26:46.286703 #23639]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-06T20:26:46.287145 #23639]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4zRJAO4FcMh6iQkF6hnJnGUmqRrj28CwVcRU8V28sk=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-06T20:26:46.366693 #23639]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-06T20:26:46.367625 #23639]  INFO -- : Completed 302 Found in 80ms (ActiveRecord: 0.3ms)
+I, [2014-02-06T20:26:46.370446 #23639]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-06 20:26:46 +0400
+I, [2014-02-06T20:26:46.371680 #23639]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-06T20:26:46.372111 #23639]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4zRJAO4FcMh6iQkF6hnJnGUmqRrj28CwVcRU8V28sk=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-06T20:26:46.450878 #23639]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-06T20:26:46.451497 #23639]  INFO -- : Completed 302 Found in 79ms (ActiveRecord: 0.5ms)
+I, [2014-02-06T20:26:46.453971 #23639]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-06 20:26:46 +0400
+I, [2014-02-06T20:26:46.455090 #23639]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-06T20:26:46.455630 #23639]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4zRJAO4FcMh6iQkF6hnJnGUmqRrj28CwVcRU8V28sk=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-06T20:26:46.534605 #23639]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-06T20:26:46.535526 #23639]  INFO -- : Completed 302 Found in 79ms (ActiveRecord: 0.2ms)
+I, [2014-02-06T20:26:46.537511 #23639]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-06 20:26:46 +0400
+I, [2014-02-06T20:26:46.538626 #23639]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-06T20:26:46.539080 #23639]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4zRJAO4FcMh6iQkF6hnJnGUmqRrj28CwVcRU8V28sk=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-06T20:26:46.617858 #23639]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-06T20:26:46.618500 #23639]  INFO -- : Completed 302 Found in 79ms (ActiveRecord: 0.2ms)
+I, [2014-02-06T20:26:46.621596 #23639]  INFO -- : Started POST "/login" for 10.10.3.143 at 2014-02-06 20:26:46 +0400
+I, [2014-02-06T20:26:46.622702 #23639]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-06T20:26:46.623136 #23639]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4zRJAO4FcMh6iQkF6hnJnGUmqRrj28CwVcRU8V28sk=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-06T20:26:46.705591 #23639]  INFO -- : Redirected to http://10.10.3.148:3000/
+I, [2014-02-06T20:26:46.706519 #23639]  INFO -- : Completed 302 Found in 83ms (ActiveRecord: 0.2ms)
+I, [2014-02-06T20:26:46.713762 #23639]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 20:26:46 +0400
+I, [2014-02-06T20:26:46.714937 #23639]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-06T20:28:06.639691 #23639]  INFO -- : Completed   in 79924ms
+I, [2014-02-06T20:28:12.818248 #23680]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 20:28:12 +0400
+I, [2014-02-06T20:28:12.828514 #23680]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-06T20:30:20.091169 #23680]  INFO -- :   Rendered charts/_game_online.html.haml (5.1ms)
+I, [2014-02-06T20:30:20.092963 #23680]  INFO -- :   Rendered main/index.html.haml within layouts/application (10.8ms)
+I, [2014-02-06T20:30:20.105254 #23680]  INFO -- : Completed 200 OK in 127276ms (Views: 26.5ms | ActiveRecord: 3.2ms)
+I, [2014-02-06T20:30:20.108798 #23680]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-06 20:30:20 +0400
+I, [2014-02-06T20:30:20.110040 #23680]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-06T20:32:27.308650 #23680]  INFO -- :   Rendered charts/_game_online.html.haml (0.3ms)
+I, [2014-02-06T20:32:27.310268 #23680]  INFO -- :   Rendered main/index.html.haml within layouts/application (2.2ms)
+I, [2014-02-06T20:32:27.312841 #23680]  INFO -- : Completed 200 OK in 127202ms (Views: 5.0ms | ActiveRecord: 0.5ms)
+I, [2014-02-06T20:32:27.315960 #23680]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-02-06 20:32:27 +0400
+I, [2014-02-06T20:32:27.317186 #23680]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-06T20:32:27.319533 #23680]  INFO -- : Redirected to http://localhost:3000/login
+I, [2014-02-06T20:32:27.322148 #23680]  INFO -- : Filter chain halted as :authorize rendered or redirected
+I, [2014-02-06T20:32:27.322691 #23680]  INFO -- : Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+I, [2014-02-06T20:32:27.346905 #23680]  INFO -- : Started GET "/login" for 127.0.0.1 at 2014-02-06 20:32:27 +0400
+I, [2014-02-06T20:32:27.349338 #23680]  INFO -- : Processing by SessionsController#new as HTML
+I, [2014-02-06T20:32:27.364051 #23680]  INFO -- :   Rendered sessions/new.html.haml within layouts/application (12.0ms)
+I, [2014-02-06T20:32:27.366436 #23680]  INFO -- : Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+I, [2014-02-06T20:32:27.450236 #23680]  INFO -- : Started GET "/assets/application-a0262a46f11f8456227fce85beed9264.css" for 127.0.0.1 at 2014-02-06 20:32:27 +0400
+I, [2014-02-06T20:32:27.488153 #23680]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 127.0.0.1 at 2014-02-06 20:32:27 +0400
+I, [2014-02-06T20:32:27.617229 #23680]  INFO -- : Started GET "/assets/favicon-becc004ac5ebde46c3b93e9baa51b50a.ico" for 127.0.0.1 at 2014-02-06 20:32:27 +0400
+I, [2014-02-06T20:32:27.811537 #23680]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 127.0.0.1 at 2014-02-06 20:32:27 +0400
+I, [2014-02-07T12:31:22.378252 #23680]  INFO -- : Started POST "/login" for 127.0.0.1 at 2014-02-07 12:31:22 +0400
+I, [2014-02-07T12:31:22.390333 #23680]  INFO -- : Processing by SessionsController#create as HTML
+I, [2014-02-07T12:31:22.390567 #23680]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzPrIAPqMv6Mqbo/kcPyITVZWCFAEi1G8gN8TJbUePU=", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "commit"=>"login"}
+I, [2014-02-07T12:31:22.518960 #23680]  INFO -- : Redirected to http://localhost:3000/
+I, [2014-02-07T12:31:22.519874 #23680]  INFO -- : Completed 302 Found in 129ms (ActiveRecord: 0.4ms)
+I, [2014-02-07T12:31:22.533799 #23680]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-02-07 12:31:22 +0400
+I, [2014-02-07T12:31:22.534885 #23680]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-07T12:33:29.766048 #23680]  INFO -- :   Rendered charts/_game_online.html.haml (0.1ms)
+I, [2014-02-07T12:33:29.768427 #23680]  INFO -- :   Rendered main/index.html.haml within layouts/application (2.8ms)
+I, [2014-02-07T12:33:29.770790 #23680]  INFO -- : Completed 200 OK in 127236ms (Views: 7.2ms | ActiveRecord: 6.7ms)
+I, [2014-02-07T12:33:29.773436 #23680]  INFO -- : Started GET "/" for 10.10.3.143 at 2014-02-07 12:33:29 +0400
+I, [2014-02-07T12:33:29.774998 #23680]  INFO -- : Processing by MainController#index as HTML
+I, [2014-02-07T12:35:36.995180 #23680]  INFO -- :   Rendered charts/_game_online.html.haml (0.1ms)
+I, [2014-02-07T12:35:36.997279 #23680]  INFO -- :   Rendered main/index.html.haml within layouts/application (2.5ms)
+I, [2014-02-07T12:35:36.999198 #23680]  INFO -- : Completed 200 OK in 127223ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+I, [2014-02-07T12:35:37.001954 #23680]  INFO -- : Started GET "/on_date" for 127.0.0.1 at 2014-02-07 12:35:37 +0400
+I, [2014-02-07T12:35:37.003967 #23680]  INFO -- : Processing by ChartsController#on_date as HTML
+I, [2014-02-07T12:37:44.250600 #23680]  INFO -- : Cache digest for charts/_game_online_select.xml: 88867300d67f130f5fa61b7112083546
+I, [2014-02-07T12:37:44.252978 #23680]  INFO -- : Read fragment views/2014-02-07/88867300d67f130f5fa61b7112083546 (0.3ms)
+I, [2014-02-07T12:37:44.263554 #23680]  INFO -- : Write fragment views/2014-02-07/88867300d67f130f5fa61b7112083546 (3.4ms)
+I, [2014-02-07T12:37:44.264155 #23680]  INFO -- :   Rendered charts/_game_online_select.html.haml (17.3ms)
+I, [2014-02-07T12:37:44.264669 #23680]  INFO -- :   Rendered charts/on_date.haml within layouts/application (22.1ms)
+I, [2014-02-07T12:37:44.266373 #23680]  INFO -- : Completed 200 OK in 127262ms (Views: 40.1ms | ActiveRecord: 0.4ms)
+I, [2014-02-07T12:37:44.269060 #23680]  INFO -- : Started GET "/assets/application-a0262a46f11f8456227fce85beed9264.css" for 10.10.3.143 at 2014-02-07 12:37:44 +0400
+I, [2014-02-07T12:37:44.271906 #23680]  INFO -- : Started GET "/assets/application-1cd14c51d526fe484dff6c318c40a28a.js" for 10.10.3.143 at 2014-02-07 12:37:44 +0400
+I, [2014-02-07T12:37:44.323268 #23680]  INFO -- : Started GET "/assets/background_main-18c9a4ea86134c2400d011861185da21.jpg" for 10.10.3.143 at 2014-02-07 12:37:44 +0400
+I, [2014-02-07T12:39:05.471375 #23680]  INFO -- : Started GET "/users" for 127.0.0.1 at 2014-02-07 12:39:05 +0400
+I, [2014-02-07T12:39:05.476520 #23680]  INFO -- : Processing by UsersController#index as HTML
+I, [2014-02-07T12:39:05.506311 #23680]  INFO -- :   Rendered users/index.html.haml within layouts/application (16.6ms)
+I, [2014-02-07T12:39:05.511035 #23680]  INFO -- : Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 1.1ms)
+I, [2014-02-07T12:39:08.036552 #23680]  INFO -- : Started GET "/users/new" for 127.0.0.1 at 2014-02-07 12:39:08 +0400
+I, [2014-02-07T12:39:08.041699 #23680]  INFO -- : Processing by UsersController#new as HTML
+I, [2014-02-07T12:39:08.085872 #23680]  INFO -- :   Rendered users/_form.html.haml (29.1ms)
+I, [2014-02-07T12:39:08.086217 #23680]  INFO -- :   Rendered users/new.html.erb within layouts/application (35.5ms)
+I, [2014-02-07T12:39:08.092923 #23680]  INFO -- : Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 0.6ms)
+I, [2014-02-07T12:39:19.665972 #23680]  INFO -- : Started POST "/users" for 127.0.0.1 at 2014-02-07 12:39:19 +0400
+I, [2014-02-07T12:39:19.667883 #23680]  INFO -- : Processing by UsersController#create as HTML
+I, [2014-02-07T12:39:19.668008 #23680]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzPrIAPqMv6Mqbo/kcPyITVZWCFAEi1G8gN8TJbUePU=", "user"=>{"email"=>"admin@sharanavti.ru", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"1"}, "commit"=>"Create User"}
+E, [2014-02-07T12:39:19.831038 #23680] ERROR -- : Binary data inserted for `string` type on column `password_digest`
+I, [2014-02-07T12:39:19.869335 #23680]  INFO -- : Redirected to http://localhost:3000/users/2
+I, [2014-02-07T12:39:19.869605 #23680]  INFO -- : Completed 302 Found in 201ms (ActiveRecord: 37.8ms)
+I, [2014-02-07T12:39:19.880683 #23680]  INFO -- : Started GET "/users/2" for 127.0.0.1 at 2014-02-07 12:39:19 +0400
+I, [2014-02-07T12:39:19.881906 #23680]  INFO -- : Processing by UsersController#show as HTML
+I, [2014-02-07T12:39:19.881978 #23680]  INFO -- :   Parameters: {"id"=>"2"}
+I, [2014-02-07T12:39:19.887413 #23680]  INFO -- :   Rendered users/show.html.erb within layouts/application (0.8ms)
+I, [2014-02-07T12:39:19.888361 #23680]  INFO -- : Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.6ms)
+I, [2014-02-07T12:39:25.737483 #23680]  INFO -- : Started GET "/users" for 127.0.0.1 at 2014-02-07 12:39:25 +0400
+I, [2014-02-07T12:39:25.742764 #23680]  INFO -- : Processing by UsersController#index as HTML
+I, [2014-02-07T12:39:25.756868 #23680]  INFO -- :   Rendered users/index.html.haml within layouts/application (11.1ms)
+I, [2014-02-07T12:39:25.758067 #23680]  INFO -- : Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+I, [2014-02-07T12:39:55.346703 #23680]  INFO -- : Started GET "/users/new" for 127.0.0.1 at 2014-02-07 12:39:55 +0400
+I, [2014-02-07T12:39:55.353251 #23680]  INFO -- : Processing by UsersController#new as HTML
+I, [2014-02-07T12:39:55.384562 #23680]  INFO -- :   Rendered users/_form.html.haml (23.3ms)
+I, [2014-02-07T12:39:55.385711 #23680]  INFO -- :   Rendered users/new.html.erb within layouts/application (24.7ms)
+I, [2014-02-07T12:39:55.386984 #23680]  INFO -- : Completed 200 OK in 33ms (Views: 25.9ms | ActiveRecord: 0.7ms)
+I, [2014-02-07T12:40:02.804232 #23680]  INFO -- : Started POST "/users" for 127.0.0.1 at 2014-02-07 12:40:02 +0400
+I, [2014-02-07T12:40:02.805886 #23680]  INFO -- : Processing by UsersController#create as HTML
+I, [2014-02-07T12:40:02.806010 #23680]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzPrIAPqMv6Mqbo/kcPyITVZWCFAEi1G8gN8TJbUePU=", "user"=>{"email"=>"adm", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"1"}, "commit"=>"Create User"}
+I, [2014-02-07T12:40:02.970922 #23680]  INFO -- :   Rendered users/_form.html.haml (7.6ms)
+I, [2014-02-07T12:40:02.971225 #23680]  INFO -- :   Rendered users/new.html.erb within layouts/application (9.2ms)
+I, [2014-02-07T12:40:02.972236 #23680]  INFO -- : Completed 200 OK in 166ms (Views: 11.4ms | ActiveRecord: 0.8ms)
