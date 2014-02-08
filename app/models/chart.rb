@@ -128,7 +128,7 @@ class Chart
       f.plot_options area: {
                   fill_color: { linear_gradient: { x1: 0, y1: 0, x2: 0, y2: 1}, stops: [[0, '#09f'],[1, '#0df']] },
                   line_width: 1,
-                  marker: { fillColor: "#93c", radius: 6, enabled: false },
+                  marker: { enabled: false },
                   shadow: false,
                   states: { hover: { line_width: 1 } },
                   threshold: nil
