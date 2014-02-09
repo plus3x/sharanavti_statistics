@@ -41,7 +41,7 @@ class Chart
                         color = '#0a0';
                         difference = 0;
 
-                        $.post("/new_dot", "", function( y ) {
+                        $.post("/charts/new_dot", '', function( y ) {
                           var x = (new Date()).getTime() + #{4.hours * 1000};
 
                           series.addPoint([ x, y ]);
