@@ -18,7 +18,7 @@ class ChartsController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render json: @data = Chart.game_online_on_date( @date ) }
-      format.js   { @data = Chart.game_online_on_date( @date ) }
+      format.js   { render nothing: true unless @data = Chart.game_online_on_date( @date ) }
     end
   end
 
