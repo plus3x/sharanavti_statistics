@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'main#index', as: :main
+  root to: 'charts#game_online'
 
   resources :users
 
@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   controller :charts do
     post 'game_online_select'
     get  'on_date'
-    post 'new_dot'
+    post 'charts/new_point'   => :new_point
+    get  'charts/game_online' => :game_online
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

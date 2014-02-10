@@ -6,15 +6,32 @@ class ChartsController < ApplicationController
     @date = Date.current
   end
 
-  # GET /chart/game_online_select?date=2013-12-01
+  # GET /charts/game_online
+  def game_online
+    respond_to do |format|
+      format.hrml
+      format.js { render json: @data = Chart.game_online }
+    end
+  end
+
+  # GET /charts/game_online_select?date=2013-12-01
   def game_online_select
     @date = Date.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i)
     @game_online_select = Chart.game_online_select_date( @date )
   end
+<<<<<<< HEAD
 
   # POST /new_dot
   def new_dot
     @dot = API.game_online_dot
     render json: @dot
+=======
+  
+  # POST /new_point
+  def new_point
+    dot = API.game_online_dot
+    @point = { x: ((Time.now.to_i + Time.now.gmt_offset) * 1000), y: dot }
+    render json: @point
+>>>>>>> 0d7aa4646806a8569308b71113baee7433df1afd
   end
 end

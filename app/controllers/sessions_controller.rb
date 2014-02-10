@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to main_url
+      redirect_to root_url
     else
       redirect_to login_url, notice: 'Invalid user/password combination'
     end

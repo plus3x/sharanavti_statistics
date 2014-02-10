@@ -8,10 +8,9 @@ gem 'rails', '4.1.0.beta1'
 gem 'activeresource'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: [:production, :test, :development]
 
 # For grafics
-gem 'lazy_high_charts'
 gem 'highcharts-rails', '~> 3.0.0'
 
 # Use HAML for templates

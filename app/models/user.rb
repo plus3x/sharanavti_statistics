@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
   has_secure_password
   
   before_validation do
-    self.email = email.downcase if attribute_present?('email')
+    self.email.try(:downcase)
   end
-  
+
   validates_format_of   :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/
   validates_presence_of :email, :password
   validates_associated  :role
