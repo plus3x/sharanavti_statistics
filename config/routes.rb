@@ -11,8 +11,7 @@ Rails.application.routes.draw do
   end
 
   controller :charts do
-    post 'game_online_select'
-    get  'on_date'
+    get  'charts/on_date'     => :on_date
     post 'charts/new_point'   => :new_point
     get  'charts/game_online' => :game_online
   end

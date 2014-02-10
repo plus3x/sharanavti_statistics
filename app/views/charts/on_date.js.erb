@@ -1,0 +1,5 @@
+var chart = $('#highchart_game_online_on_date').highcharts();
+chart.series[0].setData( <%= @data[:points] %> );
+$('#average').text( <%= @data[:average] %> );
+$('#max').text( <%= @data[:max] %> );
+$('#min').text( <%= @data[:min] %> );

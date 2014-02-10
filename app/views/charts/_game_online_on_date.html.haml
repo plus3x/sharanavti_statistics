@@ -1,0 +1,16 @@
+- cache @date do
+  #on_date_chart
+    #select_date
+      = form_tag charts_on_date_url, method: :get, remote: true do
+        %span#title Choose day:
+        = select_date @date
+        = submit_tag 'Get date'
+    #carrency
+      %span#title Period data:
+      %span.name Average:
+      %span#average 0
+      %span.name Max:
+      %span#max 0
+      %span.name Min:
+      %span#min 0
+    #highchart_game_online_on_date

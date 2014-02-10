@@ -7,10 +7,10 @@ get '/api/stat.online.get' do
   puts "Params: #{params}"
 
   from = params[:date_from].to_datetime.to_i
-  to   = params[:date_to  ].to_datetime.to_i
+  to   = params[:date_to  ].to_datetime.to_i + Time.now.gmt_offset
 
   data = []
-  (from..to).step(1.minutes) { |time| data << Random.rand(0..1000) }
+  (from..to).step(1.minutes) { |time| data << Random.rand(0..100) }
 
   puts "Array size: #{data.size}. Last element: #{data.last}."
 
