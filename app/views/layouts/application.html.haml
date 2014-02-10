@@ -19,7 +19,7 @@
     #columns
       #side
         %ul
-          %li= link_to_unless_current 'Online', main_path
+          %li= link_to_unless_current 'Online', root_path
           %li= link_to_unless_current 'On date', on_date_path
           - if (current_user.admin? rescue nil)
             %li= link_to_unless_current 'Users', users_path

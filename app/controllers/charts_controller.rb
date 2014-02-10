@@ -8,12 +8,10 @@ class ChartsController < ApplicationController
 
   # GET /charts/game_online
   def game_online
-    from = Date.today.beginning_of_day
-    to   = Time.now
-  	game_online = API.game_online_select from: from, to: to
-    @data = []
-    game_online.each_with_index { |online, i| @data << [ ((from.to_i + i.minutes.to_i) * 1000), online ] }
-  	render json: @data
+    respond_to do |format|
+      format.hrml
+      format.js { render json: @data = Chart.game_online }
+    end
   end
 
   # GET /charts/game_online_select?date=2013-12-01
@@ -22,9 +20,10 @@ class ChartsController < ApplicationController
     @game_online_select = Chart.game_online_select_date( @date )
   end
   
-  # POST /new_dot
-  def new_dot
-    @dot = API.game_online_dot
-    render json: @dot
+  # POST /new_point
+  def new_point
+    dot = API.game_online_dot
+    @point = { x: ((Time.now.to_i + Time.now.gmt_offset) * 1000), y: dot }
+    render json: @point
   end
 end

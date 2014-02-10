@@ -3,14 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  get_game_online_thread = ()->
-    chart = $('#highchart_game_online').highcharts()
-    series = chart.series[0]
-    series_length = series.points.length
-    last_point    = series.points[series_length - 1]
-    latest_point  = series.points[series_length - 2]
+  one_minute = 60 * 1000
 
-    # Update currency
+  mark_last_point = (latest_point, last_point)->
+    latest_point.update { marker: { enabled: false } }
+    last_point.update   { marker: { enabled: true  } }
+
+  update_currency = (latest_point, last_point)->
     difference = last_point.y - latest_point.y
     if difference < 0
       color = '#c00'
@@ -20,35 +19,29 @@ $ ->
     $('#difference').text difference
     $('#difference').css color: color
 
-    # Mark last point
-    last_point.update { marker: { enabled: true } }
+  mark_last_point_and_update_currency = (series)->
+    series_length = series.points.length
+    last_point    = series.points[series_length - 1]
+    latest_point  = series.points[series_length - 2]
+
+    mark_last_point( latest_point, last_point )
+    update_currency( latest_point, last_point )
+
+  get_game_online_thread = ()->
+    chart = $('#highchart_game_online').highcharts()
+    series = chart.series[0]
+
+    mark_last_point_and_update_currency( series )
 
     setInterval (->
-      $.post '/charts/new_dot'
+      $.post '/charts/new_point'
         .fail ->
           console.log 'Нет данных от сайта!'
-        .done (y)->
-          x = (new Date()).getTime() + 4 * 60 * 60 * 1000
+        .done (new_point)->
+          series.addPoint [new_point.x, new_point.y]
 
-          series.addPoint [x, y]
-
-          series_length = series.points.length
-          last_point    = series.points[series_length - 1]
-          latest_point  = series.points[series_length - 2]
-
-          latest_point.update { marker: { enabled: false } }
-          last_point.update   { marker: { enabled: true  } }
-
-          # Update currency
-          difference = last_point.y - latest_point.y
-          if difference < 0
-            color = '#c00'
-          else
-            color = '#0a0'
-          $('#current').text last_point.y
-          $('#difference').text difference
-          $('#difference').css color: color
-    ), 5 * 1000
+          mark_last_point_and_update_currency( series )
+    ), one_minute
 
   $.getJSON '/charts/game_online'
     .fail ->
