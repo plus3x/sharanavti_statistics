@@ -2,7 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+
+$(document).on 'ready page:load', ->
   $('#datepicker').datepicker(
     format: 'yyyy-mm-dd'
     endDate: 'today'
@@ -10,8 +11,6 @@ $ ->
     language: 'ru'
     todayHighlight: true
   )
-
-$(document).on 'ready page:load', ->
 
   highchart_game_online_on_date_exist = ->
     $('#highchart_game_online_on_date').length > 0
