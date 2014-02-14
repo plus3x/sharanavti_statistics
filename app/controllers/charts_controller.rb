@@ -10,8 +10,8 @@ class ChartsController < ApplicationController
 
   # GET /on_date
   def on_date
-    if date = params[:date]
-      @date = Date.new(date[:year].to_i, date[:month].to_i, date[:day].to_i)
+    if params[:date]
+      @date = params[:date].to_date
     else
       @date = Date.current
     end

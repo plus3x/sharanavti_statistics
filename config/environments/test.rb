@@ -33,7 +33,7 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
-  
+
   # Active resources configuration
   # Include '.json' on end of path or not
   config.active_resource.include_format_in_path = false

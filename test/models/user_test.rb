@@ -7,8 +7,8 @@ class UserTest < ActiveSupport::TestCase
   end
   
   test "should user can" do
-    assert users(:admin).can?(  'users',    'destroy'), "Administrator must have permission to destroy user"
-    assert users(:client).can?(  'main',    'index'  ), "Client must have permission to main page"
+    assert users(:admin).can?( 'users', 'destroy'), "Administrator must have permission to destroy user"
+    assert users(:client).can?( 'main', 'index'  ), "Client must have permission to main page"
   end
   
   test "user email must be certain format" do

@@ -9,6 +9,7 @@ class ChartTest < ActiveSupport::TestCase
   test "should get game online on date" do
     date = Date.current
     data = Chart.game_online_on_date( date )
+    assert_not_nil data
     assert_not_nil data[:points]
     assert_not_nil data[:average]
     assert_not_nil data[:max]

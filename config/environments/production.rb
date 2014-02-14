@@ -59,7 +59,16 @@ Rails.application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += %w( highcharts-data.js highcharts-more.js highcharts.js exporting.js )
+  config.assets.precompile += %w(
+    bootstrap-datepicker.js
+    bootstrap-datepicker.css
+    bootstrap-datepicker/core.js
+    bootstrap-datepicker/locales/bootstrap-datepicker.ru.js
+    highcharts-data.js
+    highcharts-more.js
+    highcharts.js
+    exporting.js
+    )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

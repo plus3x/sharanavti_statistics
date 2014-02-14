@@ -3,7 +3,7 @@
     #select_date
       = form_tag charts_on_date_url, method: :get, remote: true do
         %span#title Choose day:
-        = select_date @date
+        = text_field_tag :date, @date, id: :datepicker
         = submit_tag 'Get date'
     #carrency
       %span#title Period data:

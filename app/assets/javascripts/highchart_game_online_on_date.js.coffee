@@ -2,13 +2,17 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-# Work with reload, is bad
-# $ ->
-#   $('#date_year' ).change -> this.form.submit()
-#   $('#date_month').change -> this.form.submit()
-#   $('#date_day'  ).change -> this.form.submit()
+$ ->
+  $('#datepicker').datepicker(
+    format: 'yyyy-mm-dd'
+    endDate: 'today'
+    todayBtn: 'linked'
+    language: 'ru'
+    todayHighlight: true
+  )
 
 $(document).on 'ready page:load', ->
+
   highchart_game_online_on_date_exist = ->
     $('#highchart_game_online_on_date').length > 0
 

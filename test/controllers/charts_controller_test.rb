@@ -36,7 +36,7 @@ class ChartsControllerTest < ActionController::TestCase
   end
   
   test "should get on date via ajax with params" do
-    xhr :get, :on_date, date: { year: 2014, month: 2, day: 7}
+    xhr :get, :on_date, date: '2014-02-13'
     assert_response :success
     assert_not_nil assigns(:data)
   end
