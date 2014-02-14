@@ -10,7 +10,8 @@ $(document).on 'ready page:load', ->
     todayBtn: 'linked'
     language: 'ru'
     todayHighlight: true
-  )
+  ).on 'changeDate', ->
+    $.get('on_date.js', { date: $('#datepicker').val() })
 
   highchart_game_online_on_date_exist = ->
     $('#highchart_game_online_on_date').length > 0

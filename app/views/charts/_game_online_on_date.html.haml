@@ -1,10 +1,8 @@
 - cache @date do
   #on_date_chart
     #select_date
-      = form_tag charts_on_date_url, method: :get, remote: true do
-        %span#title Choose day:
-        = text_field_tag :date, @date, id: :datepicker
-        = submit_tag 'Get date'
+      %span#title Choose day:
+      = text_field_tag :date, @date, id: :datepicker
     #carrency
       %span#title Period data:
       %span.name Average:
